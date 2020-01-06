@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		509B2A97F7BECFBC588D34A0 /* Pods_EdhiTrust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9EB35D4D9DD60286F0E608 /* Pods_EdhiTrust.framework */; };
 		EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC26E7B23C3023400AC6C4B /* AppDelegate.swift */; };
 		EEC26E7E23C3023400AC6C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC26E7D23C3023400AC6C4B /* SceneDelegate.swift */; };
 		EEC26E8023C3023400AC6C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC26E7F23C3023400AC6C4B /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A9EB35D4D9DD60286F0E608 /* Pods_EdhiTrust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EdhiTrust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1194EF4F65149B679A006D /* Pods-EdhiTrust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdhiTrust.debug.xcconfig"; path = "Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust.debug.xcconfig"; sourceTree = "<group>"; };
+		A4E619D75221AE2C9BA17BCC /* Pods-EdhiTrust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdhiTrust.release.xcconfig"; path = "Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust.release.xcconfig"; sourceTree = "<group>"; };
 		EEC26E7823C3023400AC6C4B /* EdhiTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdhiTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC26E7B23C3023400AC6C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEC26E7D23C3023400AC6C4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509B2A97F7BECFBC588D34A0 /* Pods_EdhiTrust.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1945B9D9679A3B059859B6DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A9EB35D4D9DD60286F0E608 /* Pods_EdhiTrust.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED857AD94F960C0C6E57CB51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A1194EF4F65149B679A006D /* Pods-EdhiTrust.debug.xcconfig */,
+				A4E619D75221AE2C9BA17BCC /* Pods-EdhiTrust.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EEC26E6F23C3023400AC6C4B = {
 			isa = PBXGroup;
 			children = (
 				EEC26E7A23C3023400AC6C4B /* EdhiTrust */,
 				EEC26E7923C3023400AC6C4B /* Products */,
+				ED857AD94F960C0C6E57CB51 /* Pods */,
+				1945B9D9679A3B059859B6DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEC26E8C23C3023600AC6C4B /* Build configuration list for PBXNativeTarget "EdhiTrust" */;
 			buildPhases = (
+				027FDB264FB258152E789EAC /* [CP] Check Pods Manifest.lock */,
 				EEC26E7423C3023400AC6C4B /* Sources */,
 				EEC26E7523C3023400AC6C4B /* Frameworks */,
 				EEC26E7623C3023400AC6C4B /* Resources */,
+				4774F5A0C91E641040AC83F8 /* [CP] Embed Pods Frameworks */,
+				C9A956BC06A08129493D0BB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		027FDB264FB258152E789EAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EdhiTrust-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4774F5A0C91E641040AC83F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9A956BC06A08129493D0BB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEC26E7423C3023400AC6C4B /* Sources */ = {
@@ -282,6 +369,7 @@
 		};
 		EEC26E8D23C3023600AC6C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A1194EF4F65149B679A006D /* Pods-EdhiTrust.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,7 +378,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com..EdhiTrust;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edhi-trust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,6 +387,7 @@
 		};
 		EEC26E8E23C3023600AC6C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E619D75221AE2C9BA17BCC /* Pods-EdhiTrust.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com..EdhiTrust;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edhi-trust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
