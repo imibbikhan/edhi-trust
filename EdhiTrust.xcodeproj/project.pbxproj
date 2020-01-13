@@ -8,13 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		509B2A97F7BECFBC588D34A0 /* Pods_EdhiTrust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9EB35D4D9DD60286F0E608 /* Pods_EdhiTrust.framework */; };
+		EE31138823C6ECFB006EFF1E /* GenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE31138723C6ECFB006EFF1E /* GenderView.xib */; };
+		EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE31138923C6EDE6006EFF1E /* GenderView.swift */; };
+		EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */; };
+		EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE404B7923C8B34000884272 /* MissingsViewController.swift */; };
+		EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51A1A223C49017007602CF /* BloodRequestsViewController.swift */; };
+		EE51A1A823C493FF007602CF /* IconTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51A1A623C493FE007602CF /* IconTextFieldView.swift */; };
+		EE51A1A923C493FF007602CF /* IconTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE51A1A723C493FF007602CF /* IconTextFieldView.xib */; };
+		EE51A1AB23C499B3007602CF /* PostBloodRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */; };
+		EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */; };
 		EE95DD0523C307B000BFC0EB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0423C307B000BFC0EB /* SignInViewController.swift */; };
 		EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0723C309D200BFC0EB /* Constants.swift */; };
 		EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0923C30A1800BFC0EB /* Extension.swift */; };
+		EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC0D4CB23C8ABB400829B30 /* MissingView.swift */; };
+		EEC0D4CE23C8ABFD00829B30 /* MissingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC0D4CD23C8ABFD00829B30 /* MissingView.xib */; };
 		EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC26E7B23C3023400AC6C4B /* AppDelegate.swift */; };
 		EEC26E8323C3023400AC6C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC26E8123C3023400AC6C4B /* Main.storyboard */; };
 		EEC26E8523C3023600AC6C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC26E8423C3023600AC6C4B /* Assets.xcassets */; };
 		EEC26E8823C3023600AC6C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC26E8623C3023600AC6C4B /* LaunchScreen.storyboard */; };
+		EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */; };
+		EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */; };
 		EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A3A23C3655B0005E291 /* RoundShadowView.swift */; };
 		EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A3E23C36FA00005E291 /* StartHomeViewController.swift */; };
 		EEEB0A4323C37E660005E291 /* AmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A4223C37E660005E291 /* AmbulancesViewController.swift */; };
@@ -26,15 +39,28 @@
 		2A9EB35D4D9DD60286F0E608 /* Pods_EdhiTrust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EdhiTrust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1194EF4F65149B679A006D /* Pods-EdhiTrust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdhiTrust.debug.xcconfig"; path = "Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust.debug.xcconfig"; sourceTree = "<group>"; };
 		A4E619D75221AE2C9BA17BCC /* Pods-EdhiTrust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdhiTrust.release.xcconfig"; path = "Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust.release.xcconfig"; sourceTree = "<group>"; };
+		EE31138723C6ECFB006EFF1E /* GenderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderView.xib; sourceTree = "<group>"; };
+		EE31138923C6EDE6006EFF1E /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
+		EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMissingViewController.swift; sourceTree = "<group>"; };
+		EE404B7923C8B34000884272 /* MissingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingsViewController.swift; sourceTree = "<group>"; };
+		EE51A1A223C49017007602CF /* BloodRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsViewController.swift; sourceTree = "<group>"; };
+		EE51A1A623C493FE007602CF /* IconTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTextFieldView.swift; sourceTree = "<group>"; };
+		EE51A1A723C493FF007602CF /* IconTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconTextFieldView.xib; sourceTree = "<group>"; };
+		EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBloodRequestViewController.swift; sourceTree = "<group>"; };
+		EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersDetailsViewController.swift; sourceTree = "<group>"; };
 		EE95DD0423C307B000BFC0EB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE95DD0723C309D200BFC0EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE95DD0923C30A1800BFC0EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EEC0D4CB23C8ABB400829B30 /* MissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingView.swift; sourceTree = "<group>"; };
+		EEC0D4CD23C8ABFD00829B30 /* MissingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissingView.xib; sourceTree = "<group>"; };
 		EEC26E7823C3023400AC6C4B /* EdhiTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdhiTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC26E7B23C3023400AC6C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEC26E8223C3023400AC6C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEC26E8423C3023600AC6C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEC26E8723C3023600AC6C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEC26E8923C3023600AC6C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsCarbonViewController.swift; sourceTree = "<group>"; };
+		EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPersonCarbonViewController.swift; sourceTree = "<group>"; };
 		EEEB0A3A23C3655B0005E291 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		EEEB0A3E23C36FA00005E291 /* StartHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartHomeViewController.swift; sourceTree = "<group>"; };
 		EEEB0A4223C37E660005E291 /* AmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbulancesViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +97,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EE31138623C6E81C006EFF1E /* GenderView */ = {
+			isa = PBXGroup;
+			children = (
+				EE31138723C6ECFB006EFF1E /* GenderView.xib */,
+				EE31138923C6EDE6006EFF1E /* GenderView.swift */,
+			);
+			path = GenderView;
+			sourceTree = "<group>";
+		};
+		EE51A1A423C493D9007602CF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EEC0D4CA23C8ABA700829B30 /* MissingView */,
+				EE31138623C6E81C006EFF1E /* GenderView */,
+				EE51A1A523C493E4007602CF /* InputView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EE51A1A523C493E4007602CF /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				EE51A1A623C493FE007602CF /* IconTextFieldView.swift */,
+				EE51A1A723C493FF007602CF /* IconTextFieldView.xib */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
+		EE56668723CC0D3A005A7415 /* Center Details */ = {
+			isa = PBXGroup;
+			children = (
+				EE56668823CC0D45005A7415 /* ViewControllers */,
+			);
+			path = "Center Details";
+			sourceTree = "<group>";
+		};
+		EE56668823CC0D45005A7415 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		EE95DD0223C306FD00BFC0EB /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +169,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		EEC0D4CA23C8ABA700829B30 /* MissingView */ = {
+			isa = PBXGroup;
+			children = (
+				EEC0D4CB23C8ABB400829B30 /* MissingView.swift */,
+				EEC0D4CD23C8ABFD00829B30 /* MissingView.xib */,
+			);
+			path = MissingView;
+			sourceTree = "<group>";
+		};
 		EEC26E6F23C3023400AC6C4B = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +199,10 @@
 		EEC26E7A23C3023400AC6C4B /* EdhiTrust */ = {
 			isa = PBXGroup;
 			children = (
+				EE56668723CC0D3A005A7415 /* Center Details */,
+				EE51A1A423C493D9007602CF /* CustomViews */,
+				EED5D4B623C39DD200F516A0 /* Missing Person */,
+				EED5D4B223C39B6800F516A0 /* Blood Requests */,
 				EEEB0A4023C37E4A0005E291 /* Ambulances */,
 				EEEB0A3C23C36F880005E291 /* Start Home */,
 				EE95DD0623C309BF00BFC0EB /* Helpers */,
@@ -131,6 +214,42 @@
 				EEC26E8923C3023600AC6C4B /* Info.plist */,
 			);
 			path = EdhiTrust;
+			sourceTree = "<group>";
+		};
+		EED5D4B223C39B6800F516A0 /* Blood Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EED5D4B323C39B7E00F516A0 /* ViewControllers */,
+			);
+			path = "Blood Requests";
+			sourceTree = "<group>";
+		};
+		EED5D4B323C39B7E00F516A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */,
+				EE51A1A223C49017007602CF /* BloodRequestsViewController.swift */,
+				EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EED5D4B623C39DD200F516A0 /* Missing Person */ = {
+			isa = PBXGroup;
+			children = (
+				EED5D4B723C39DDA00F516A0 /* ViewController */,
+			);
+			path = "Missing Person";
+			sourceTree = "<group>";
+		};
+		EED5D4B723C39DDA00F516A0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */,
+				EE404B7923C8B34000884272 /* MissingsViewController.swift */,
+				EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		EEEB0A3C23C36F880005E291 /* Start Home */ = {
@@ -226,7 +345,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE51A1A923C493FF007602CF /* IconTextFieldView.xib in Resources */,
+				EE31138823C6ECFB006EFF1E /* GenderView.xib in Resources */,
 				EEC26E8823C3023600AC6C4B /* LaunchScreen.storyboard in Resources */,
+				EEC0D4CE23C8ABFD00829B30 /* MissingView.xib in Resources */,
 				EEC26E8523C3023600AC6C4B /* Assets.xcassets in Resources */,
 				EEC26E8323C3023400AC6C4B /* Main.storyboard in Resources */,
 				EEEB0A4723C37FCC0005E291 /* style.json in Resources */,
@@ -300,13 +422,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEEB0A4323C37E660005E291 /* AmbulancesViewController.swift in Sources */,
+				EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */,
 				EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */,
+				EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */,
+				EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */,
+				EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */,
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
+				EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */,
+				EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */,
+				EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */,
 				EE95DD0523C307B000BFC0EB /* SignInViewController.swift in Sources */,
 				EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */,
 				EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */,
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
 				EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */,
+				EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */,
+				EE51A1A823C493FF007602CF /* IconTextFieldView.swift in Sources */,
+				EE51A1AB23C499B3007602CF /* PostBloodRequestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

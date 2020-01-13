@@ -21,6 +21,11 @@ class AmbulancesViewController: UIViewController {
         setupUI()
         setupLocationManager()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        guard let tab = self.tabBarController else { return }
+        tab.tabBar.tintColor = EDHI_PRIMARY
+        tab.navigationItem.title = "Ambluances"
+    }
 
 }
 // MARK: - Private Methods
@@ -36,7 +41,7 @@ extension AmbulancesViewController {
             locationManager.requestAlwaysAuthorization()
             self.checkStatus()
         }else{
-            PopUp.shared.show(view: self, message: "On your locations services. So that you will be able to see vendors near you.")
+            PopUp.shared.show(view: self, message: "Location services are off.")
         }
     }
     fileprivate func checkStatus() {
@@ -49,9 +54,12 @@ extension AmbulancesViewController {
             break
         }
     }
-    fileprivate func addMarkers() {
+    fileprivate func addMarkers(coordinates: CLLocationCoordinate2D) {
         DispatchQueue.main.async {
             self.mapView.clear()
+            let marker = GMSMarker(position: coordinates)
+            marker.icon = GMSMarker.markerImage(with: UIColor(hexString: PRIMARY_COLOR))
+            marker.map = self.mapView
         }
     }
     fileprivate func styleMap() {
@@ -71,7 +79,6 @@ extension AmbulancesViewController {
 extension AmbulancesViewController: CLLocationManagerDelegate, GMSMapViewDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-//            self.myLocation = location
             let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                                   longitude: location.coordinate.longitude,
                                                   zoom: 15.0)
@@ -79,6 +86,7 @@ extension AmbulancesViewController: CLLocationManagerDelegate, GMSMapViewDelegat
             mapView.delegate = self
             mapView.isMyLocationEnabled = true
             mapView.settings.myLocationButton = true
+            self.addMarkers(coordinates: location.coordinate)
         }
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

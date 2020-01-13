@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IconTextFieldView" customModule="EdhiTrust" customModuleProvider="target">
+            <connections>
+                <outlet property="field" destination="ae6-dI-KsS" id="UPK-rX-uRY"/>
+                <outlet property="icon" destination="w1a-vW-14L" id="L63-G5-ghm"/>
+                <outlet property="roundedBorderView" destination="WRe-YC-2tb" id="7Gh-hE-Edk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRe-YC-2tb">
+                    <rect key="frame" x="0.0" y="0.0" width="433" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NJl-fv-2ir">
+                            <rect key="frame" x="10" y="0.0" width="413" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person2" translatesAutoresizingMaskIntoConstraints="NO" id="w1a-vW-14L">
+                                    <rect key="frame" x="0.0" y="19" width="22" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="22" id="1yT-Lh-jcJ"/>
+                                        <constraint firstAttribute="height" constant="22" id="TRI-gw-2Ui"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ae6-dI-KsS">
+                                    <rect key="frame" x="32" y="0.0" width="381" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ae6-dI-KsS" firstAttribute="top" secondItem="NJl-fv-2ir" secondAttribute="top" id="C9g-Yp-0wV"/>
+                                <constraint firstAttribute="bottom" secondItem="ae6-dI-KsS" secondAttribute="bottom" id="hEQ-cg-Gdx"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="NJl-fv-2ir" firstAttribute="leading" secondItem="WRe-YC-2tb" secondAttribute="leading" constant="10" id="UF6-6P-Pyz"/>
+                        <constraint firstItem="NJl-fv-2ir" firstAttribute="top" secondItem="WRe-YC-2tb" secondAttribute="top" id="bDX-e0-4lb"/>
+                        <constraint firstAttribute="bottom" secondItem="NJl-fv-2ir" secondAttribute="bottom" id="dzl-yR-7na"/>
+                        <constraint firstAttribute="trailing" secondItem="NJl-fv-2ir" secondAttribute="trailing" constant="10" id="o6m-SR-fP8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WRe-YC-2tb" secondAttribute="trailing" id="DIb-U5-Arr"/>
+                <constraint firstItem="WRe-YC-2tb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KNf-aD-spQ"/>
+                <constraint firstAttribute="bottom" secondItem="WRe-YC-2tb" secondAttribute="bottom" id="eRu-FH-tdn"/>
+                <constraint firstItem="WRe-YC-2tb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wkb-W3-3sG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="141.30434782608697" y="-107.60869565217392"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person2" width="100" height="92"/>
+    </resources>
+</document>

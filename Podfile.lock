@@ -4,6 +4,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.3.0)
   - AppAuth/Core (1.3.0)
   - AppAuth/ExternalUserAgent (1.3.0)
+  - CarbonKit (2.3.1)
   - CodableFirebase (0.2.1)
   - DynamicBlurView (4.0.0)
   - Firebase/Auth (6.13.0):
@@ -126,6 +127,7 @@ PODS:
   - SwiftyPickerPopover (6.6.6)
 
 DEPENDENCIES:
+  - CarbonKit
   - CodableFirebase
   - Firebase/Auth
   - Firebase/Core
@@ -144,6 +146,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AppAuth
+    - CarbonKit
     - CodableFirebase
     - DynamicBlurView
     - Firebase
@@ -176,6 +179,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
+  CarbonKit: b60e24dbdb47179990d5e074efa87ab819c8de98
   CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
   DynamicBlurView: ccf9acd2b20c883cc2c72e3524a04d8d3ee20533
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
@@ -206,6 +210,6 @@ SPEC CHECKSUMS:
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
   SwiftyPickerPopover: a402960a6687c911ffcb4e9fb282a1bc61186ab4
 
-PODFILE CHECKSUM: d4a25ad7795aa27c1216da00be81a3be7d883c74
+PODFILE CHECKSUM: 0a76495ebc389dbb15bc74c6d00da8f5dbb2cacd
 
 COCOAPODS: 1.8.4

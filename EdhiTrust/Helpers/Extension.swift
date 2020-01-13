@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import CarbonKit
+
 extension UIColor {
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
@@ -140,6 +142,9 @@ extension UIButton {
         self.backgroundColor = UIColor(hexString: LIGHT_GREY_COLOR)
         self.roundBtn(corners: 5)
     }
+    func corners(radius: CGFloat) {
+        self.layer.cornerRadius = radius
+    }
 }
 extension UIView {
     func roundCorner(radius: CGFloat) {
@@ -154,5 +159,22 @@ extension UIView {
 extension Double {
     var makeReview:String {
         return String(format: "%.1f", self)
+    }
+}
+extension CarbonTabSwipeNavigation {
+    func setupCarbon(view: UIView, target: UIViewController) {
+        self.setTabBarHeight(50)
+        self.setIndicatorColor(UIColor(hexString: PRIMARY_COLOR))
+        self.setNormalColor(UIColor.black, font: UIFont.boldSystemFont(ofSize: 16))
+        self.setSelectedColor(UIColor.darkGray, font: UIFont.boldSystemFont(ofSize: 16))
+        self.insert(intoRootViewController: target, andTargetView: view)
+        self.toolbar.isTranslucent = false
+        self.view.backgroundColor = UIColor.white
+    }
+}
+extension UIImageView {
+    func corners(radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.clipsToBounds = true
     }
 }

@@ -20,5 +20,6 @@ target 'EdhiTrust' do
   pod 'Floaty', '~> 4.2.0'
   pod 'PopupDialog', '~> 1.1'
   pod "FlagPhoneNumber"
+  pod 'CarbonKit'
 
 end

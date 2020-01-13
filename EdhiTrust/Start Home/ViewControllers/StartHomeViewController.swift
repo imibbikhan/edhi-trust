@@ -13,7 +13,7 @@ class StartHomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    var list = ["Home", "Ambulance", "Blood Request", "Missing Person", "Contact Center", "Center Details", "Donations"]
+    var list = ["Home", "Ambulance", "Blood Requests", "Missing Person", "Contact Center", "Center Details", "Donations", "Edit Profile"]
     // MARK: - ViewControllers life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ extension StartHomeViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        self.navigationController?.navigationBar.topItem?.title = "EDHI TRUST"
+        self.navigationController?.navigationBar.topItem?.title = "EDHI"
         self.navigationController?.navigationBar.barTintColor = EDHI_PRIMARY
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
