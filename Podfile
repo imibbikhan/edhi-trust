@@ -21,5 +21,6 @@ target 'EdhiTrust' do
   pod 'PopupDialog', '~> 1.1'
   pod "FlagPhoneNumber"
   pod 'CarbonKit'
+  pod 'ImageSlideshow/SDWebImage'
 
 end
