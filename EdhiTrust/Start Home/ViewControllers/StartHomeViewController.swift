@@ -114,5 +114,6 @@ class NearBloodDonations: UICollectionViewCell {
     
     override func awakeFromNib() {
         roundedView.layer.cornerRadius = 35
+        roundedView.backgroundColor = BLOOD_COLOR
     }
 }

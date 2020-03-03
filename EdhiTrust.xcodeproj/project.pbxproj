@@ -26,6 +26,8 @@
 		EEC26E8323C3023400AC6C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC26E8123C3023400AC6C4B /* Main.storyboard */; };
 		EEC26E8523C3023600AC6C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC26E8423C3023600AC6C4B /* Assets.xcassets */; };
 		EEC26E8823C3023600AC6C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC26E8623C3023600AC6C4B /* LaunchScreen.storyboard */; };
+		EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8659D240E5EB400D84AEC /* BloodView.swift */; };
+		EEC865A0240E5F4200D84AEC /* BloodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC8659F240E5F4200D84AEC /* BloodView.xib */; };
 		EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */; };
 		EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */; };
 		EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A3A23C3655B0005E291 /* RoundShadowView.swift */; };
@@ -59,6 +61,8 @@
 		EEC26E8423C3023600AC6C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEC26E8723C3023600AC6C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEC26E8923C3023600AC6C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC8659D240E5EB400D84AEC /* BloodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodView.swift; sourceTree = "<group>"; };
+		EEC8659F240E5F4200D84AEC /* BloodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodView.xib; sourceTree = "<group>"; };
 		EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsCarbonViewController.swift; sourceTree = "<group>"; };
 		EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPersonCarbonViewController.swift; sourceTree = "<group>"; };
 		EEEB0A3A23C3655B0005E291 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		EE51A1A423C493D9007602CF /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EEC8659C240E5E9500D84AEC /* Blood DonationView */,
 				EEC0D4CA23C8ABA700829B30 /* MissingView */,
 				EE31138623C6E81C006EFF1E /* GenderView */,
 				EE51A1A523C493E4007602CF /* InputView */,
@@ -200,12 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				EE56668723CC0D3A005A7415 /* Center Details */,
+				EE95DD0623C309BF00BFC0EB /* Helpers */,
 				EE51A1A423C493D9007602CF /* CustomViews */,
 				EED5D4B623C39DD200F516A0 /* Missing Person */,
 				EED5D4B223C39B6800F516A0 /* Blood Requests */,
 				EEEB0A4023C37E4A0005E291 /* Ambulances */,
 				EEEB0A3C23C36F880005E291 /* Start Home */,
-				EE95DD0623C309BF00BFC0EB /* Helpers */,
 				EE95DD0323C3079E00BFC0EB /* Auth */,
 				EE95DD0223C306FD00BFC0EB /* Delegates */,
 				EEC26E8123C3023400AC6C4B /* Main.storyboard */,
@@ -214,6 +219,15 @@
 				EEC26E8923C3023600AC6C4B /* Info.plist */,
 			);
 			path = EdhiTrust;
+			sourceTree = "<group>";
+		};
+		EEC8659C240E5E9500D84AEC /* Blood DonationView */ = {
+			isa = PBXGroup;
+			children = (
+				EEC8659D240E5EB400D84AEC /* BloodView.swift */,
+				EEC8659F240E5F4200D84AEC /* BloodView.xib */,
+			);
+			path = "Blood DonationView";
 			sourceTree = "<group>";
 		};
 		EED5D4B223C39B6800F516A0 /* Blood Requests */ = {
@@ -346,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE51A1A923C493FF007602CF /* IconTextFieldView.xib in Resources */,
+				EEC865A0240E5F4200D84AEC /* BloodView.xib in Resources */,
 				EE31138823C6ECFB006EFF1E /* GenderView.xib in Resources */,
 				EEC26E8823C3023600AC6C4B /* LaunchScreen.storyboard in Resources */,
 				EEC0D4CE23C8ABFD00829B30 /* MissingView.xib in Resources */,
@@ -434,6 +449,7 @@
 				EE95DD0523C307B000BFC0EB /* SignInViewController.swift in Sources */,
 				EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */,
 				EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */,
+				EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */,
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
 				EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */,
 				EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */,

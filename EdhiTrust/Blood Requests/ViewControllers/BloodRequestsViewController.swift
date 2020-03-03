@@ -25,7 +25,8 @@ class BloodRequestsViewController: UIViewController {
 // MARK: - Private Methods
 extension BloodRequestsViewController {
     fileprivate func setupUI() {
-        
+        print("wored")
+        self.navigationItem.title = "Blood Requests"
     }
     fileprivate func setupTableView() {
         tableView.delegate = self
@@ -36,14 +37,14 @@ extension BloodRequestsViewController {
 // MARK: - TableView Delegate And DataSource
 extension BloodRequestsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 160
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "requestCell") as? RequestCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell")
         return cell!
     }
     

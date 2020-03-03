@@ -25,7 +25,7 @@ class MissingsViewController: UIViewController {
 // MARK: - Private Methods
 extension MissingsViewController {
     fileprivate func setupUI() {
-        
+        self.navigationItem.title = "Missings"
     }
     fileprivate func setupTableView() {
         tableView.delegate = self

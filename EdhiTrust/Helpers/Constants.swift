@@ -14,9 +14,11 @@ import Firebase
 let PRIMARY_COLOR = "5ABA4A"
 let LIGHT_GREY_COLOR = "AAAAAA"
 let BACKGROUND_GREY_COLOR = "FAFAFA"
+let BLOOD_COLOR_CODE = "ED9393"
 
 // MARK: - COLORS
 let EDHI_PRIMARY = UIColor(hexString: PRIMARY_COLOR)
+let BLOOD_COLOR = UIColor(hexString: BLOOD_COLOR_CODE)
 
 // MARK: - Repeated
 let STORYBOARD = UIStoryboard(name: "Main", bundle: nil)
