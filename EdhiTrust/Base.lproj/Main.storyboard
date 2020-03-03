@@ -893,7 +893,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-j1-XuJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-j1-XuJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -904,28 +904,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGB-WN-qNz" customClass="RoundShadowView" customModule="EdhiTrust" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZP9-La-5r3" customClass="MissingView" customModule="EdhiTrust" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="11" width="374" height="186"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZP9-La-5r3" customClass="MissingView" customModule="EdhiTrust" customModuleProvider="target">
-                                                            <rect key="frame" x="10" y="0.0" width="354" height="186"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        </view>
-                                                    </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="ZP9-La-5r3" secondAttribute="bottom" id="EfZ-jj-aff"/>
-                                                        <constraint firstItem="ZP9-La-5r3" firstAttribute="top" secondItem="MGB-WN-qNz" secondAttribute="top" id="FJv-Li-vX3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ZP9-La-5r3" secondAttribute="trailing" constant="10" id="GlN-J3-0RN"/>
-                                                        <constraint firstItem="ZP9-La-5r3" firstAttribute="leading" secondItem="MGB-WN-qNz" secondAttribute="leading" constant="10" id="W2E-ym-2qk"/>
-                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="MGB-WN-qNz" secondAttribute="trailing" id="3DK-7K-abq"/>
-                                                <constraint firstItem="MGB-WN-qNz" firstAttribute="leading" secondItem="Pn3-Wv-br6" secondAttribute="leadingMargin" id="SR6-k3-qWI"/>
-                                                <constraint firstItem="MGB-WN-qNz" firstAttribute="top" secondItem="Pn3-Wv-br6" secondAttribute="topMargin" id="xuH-Sg-054"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="MGB-WN-qNz" secondAttribute="bottom" id="zEI-ms-EuZ"/>
+                                                <constraint firstItem="ZP9-La-5r3" firstAttribute="top" secondItem="Pn3-Wv-br6" secondAttribute="topMargin" id="9xx-p6-7EN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZP9-La-5r3" secondAttribute="trailing" id="OwI-NP-2dM"/>
+                                                <constraint firstItem="ZP9-La-5r3" firstAttribute="bottom" secondItem="Pn3-Wv-br6" secondAttribute="bottomMargin" id="kU5-b1-6a3"/>
+                                                <constraint firstItem="ZP9-La-5r3" firstAttribute="leading" secondItem="Pn3-Wv-br6" secondAttribute="leadingMargin" id="sm3-6h-ZR1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

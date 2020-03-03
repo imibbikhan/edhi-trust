@@ -36,7 +36,7 @@ extension MissingsViewController {
 // MARK: - TableView Delegate And DataSource
 extension MissingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 310
+        return 160
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
