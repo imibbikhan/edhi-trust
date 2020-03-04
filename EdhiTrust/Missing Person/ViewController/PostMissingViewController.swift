@@ -28,6 +28,9 @@ class PostMissingViewController: UIViewController {
 // MARK: - Private Methods
 extension PostMissingViewController {
     fileprivate func setupUI() {
+        
+        self.navigationItem.title = "Post Missing"
+        
         fromLocation.icon.image = UIImage(named: "pin2")
         dissappearedLocation.icon.image = UIImage(named: "pin2")
         missingAge.icon.image = UIImage(named: "age")

@@ -1,14 +1,14 @@
 //
-//  MissingsViewController.swift
+//  AllAmbulancesViewController.swift
 //  EdhiTrust
 //
-//  Created by Ibbi Khan on 10/01/2020.
+//  Created by Ibbi Khan on 04/03/2020.
 //  Copyright © 2020 Ibbi Khan. All rights reserved.
 //
 
 import UIKit
 
-class MissingsViewController: UIViewController {
+class AllAmbulancesViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,15 +23,9 @@ class MissingsViewController: UIViewController {
     
 }
 // MARK: - Private Methods
-extension MissingsViewController {
+extension AllAmbulancesViewController {
     fileprivate func setupUI() {
-        self.navigationItem.title = "Missings"
         
-        let btn = FloatButton(controller: self)
-        btn.buttonTapped = {
-            let vc = STORYBOARD.instantiateViewController(withIdentifier: "PostMissings")
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
     }
     fileprivate func setupTableView() {
         tableView.delegate = self
@@ -40,16 +34,13 @@ extension MissingsViewController {
     }
 }
 // MARK: - TableView Delegate And DataSource
-extension MissingsViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
-    }
+extension AllAmbulancesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "missingCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell")
         return cell!
     }
     

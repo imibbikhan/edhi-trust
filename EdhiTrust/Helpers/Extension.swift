@@ -185,3 +185,23 @@ extension UIImageView {
         self.clipsToBounds = true
     }
 }
+extension UIViewController {
+    
+    var hasSafeArea: Bool {
+        guard
+            #available(iOS 11.0, tvOS 11.0, *)
+            else {
+                return false
+        }
+        return UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0 > 20
+    }
+    
+}
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}

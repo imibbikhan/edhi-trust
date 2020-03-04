@@ -125,6 +125,7 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
+  - PullUpController (0.7.0)
   - SDWebImage (4.4.7):
     - SDWebImage/Core (= 4.4.7)
   - SDWebImage/Core (4.4.7)
@@ -145,6 +146,7 @@ DEPENDENCIES:
   - ImageSlideshow/SDWebImage
   - IQKeyboardManagerSwift
   - PopupDialog (~> 1.1)
+  - PullUpController
   - SDWebImage (~> 4.0)
   - SwiftyPickerPopover
 
@@ -180,6 +182,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PopupDialog
+    - PullUpController
     - SDWebImage
     - SwiftyPickerPopover
 
@@ -214,9 +217,10 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
+  PullUpController: 5c8710cb686dca43d5850ae994debb7fdb824b75
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
   SwiftyPickerPopover: a402960a6687c911ffcb4e9fb282a1bc61186ab4
 
-PODFILE CHECKSUM: 2a227f87ad33fbd2da0a6a020882609dbf19560b
+PODFILE CHECKSUM: e45446bf132b55cf23798681ec4a54dfaa678a28
 
 COCOAPODS: 1.8.4

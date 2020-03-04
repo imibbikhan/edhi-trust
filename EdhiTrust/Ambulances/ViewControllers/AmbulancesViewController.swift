@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import PullUpController
 class AmbulancesViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var mapView: GMSMapView!
@@ -27,11 +28,20 @@ class AmbulancesViewController: UIViewController {
         tab.navigationItem.title = "Ambluances"
     }
 
+    // MARK: - Objc Methods
+    @objc func showAll() {
+        let vc = STORYBOARD.instantiateViewController(withIdentifier: "AllAmbulances")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 // MARK: - Private Methods
 extension AmbulancesViewController {
     fileprivate func setupUI() {
+        self.navigationItem.title = "Ambulances"
         styleMap()
+        
+        let btn = UIBarButtonItem(title: "All", style: .done, target: self, action: #selector(showAll))
+        self.navigationItem.rightBarButtonItem = btn
     }
     fileprivate func setupLocationManager() {
         if CLLocationManager.locationServicesEnabled() {
@@ -115,5 +125,11 @@ extension AmbulancesViewController: CLLocationManagerDelegate, GMSMapViewDelegat
         default:
             break
         }
+    }
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let amb = STORYBOARD.instantiateViewController(withIdentifier: "AmbulanceView")
+//        amb.modalPresentationStyle = .fullScreen
+        self.present(amb, animated: true)
+        return true
     }
 }

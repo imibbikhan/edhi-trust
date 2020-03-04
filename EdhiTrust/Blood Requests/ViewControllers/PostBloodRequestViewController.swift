@@ -24,6 +24,7 @@ class PostBloodRequestViewController: UIViewController {
 // MARK: - Private Methods
 extension PostBloodRequestViewController {
     fileprivate func setupUI() {
+        self.navigationItem.title = "Post Request"
         // rounded corners..
         for btn in bloodGroups {
             btn.corners(radius: btn.layer.frame.height/2)

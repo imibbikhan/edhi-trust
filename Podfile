@@ -22,5 +22,6 @@ target 'EdhiTrust' do
   pod "FlagPhoneNumber"
   pod 'CarbonKit'
   pod 'ImageSlideshow/SDWebImage'
+  pod 'PullUpController'
 
 end

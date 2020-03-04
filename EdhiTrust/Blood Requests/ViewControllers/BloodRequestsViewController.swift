@@ -25,8 +25,13 @@ class BloodRequestsViewController: UIViewController {
 // MARK: - Private Methods
 extension BloodRequestsViewController {
     fileprivate func setupUI() {
-        print("wored")
         self.navigationItem.title = "Blood Requests"
+        
+        let btn = FloatButton(controller: self)
+        btn.buttonTapped = {
+            let vc = STORYBOARD.instantiateViewController(withIdentifier: "PostBloodRequest")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     fileprivate func setupTableView() {
         tableView.delegate = self
