@@ -146,11 +146,15 @@ extension UIButton {
         self.layer.cornerRadius = radius
     }
     func addShadow() {
-        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.layer.shadowOffset = CGSize(width: 0, height: 0.5)
         self.layer.shadowColor = UIColor.lightGray.cgColor
         self.layer.shadowOpacity = 1
-        self.layer.shadowRadius = 5
+        self.layer.shadowRadius = 3
         self.layer.masksToBounds = false
+    }
+    func borders() {
+        self.layer.borderWidth = 0.3
+        self.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
 extension UIView {

@@ -9,16 +9,23 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
-//import Firebase
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        FirebaseApp.configure()
         GMSServices.provideAPIKey(GOOGLE_MAP_KEY)
-        GMSPlacesClient.provideAPIKey("AIzaSyC7aO2ri5wsZEBhI3iqm70A1-m7vTYmehg")
+        GMSPlacesClient.provideAPIKey(GOOGLE_MAP_KEY)
+        checkLogin()
         return true
     }
-
+    func checkLogin() {
+        guard let _ = Auth.auth().currentUser?.uid else {
+            Navigator.setSignInRoot(window: window ?? UIWindow())
+            return
+        }
+        Navigator.setHomeRoot(window: window ?? UIWindow())
+    }
 }
 

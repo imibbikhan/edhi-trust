@@ -23,6 +23,6 @@ let BLOOD_COLOR = UIColor(hexString: BLOOD_COLOR_CODE)
 // MARK: - Repeated
 let STORYBOARD = UIStoryboard(name: "Main", bundle: nil)
 let DEFAULTS = UserDefaults.standard
-let GOOGLE_MAP_KEY = "AIzaSyBzMuHUjLd1vJdtwbVO5-1ePPAO_ggsHfU"
+let GOOGLE_MAP_KEY = "AIzaSyC7aO2ri5wsZEBhI3iqm70A1-m7vTYmehg"
 let FB_DB_REF = Database.database().reference()
 let FB_ST_REF = Storage.storage().reference()

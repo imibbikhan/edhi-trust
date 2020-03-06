@@ -8,9 +8,11 @@
 
 import UIKit
 import FlagPhoneNumber
+import PKHUD
 class SignInViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var countryCode: FPNTextField!
+    @IBOutlet weak var verificationCode: UITextField!
     @IBOutlet weak var signInWithNUmBtn: UIButton!
     @IBOutlet weak var halfView: UIView!
     @IBOutlet weak var centerView: RoundShadowView!
@@ -19,19 +21,28 @@ class SignInViewController: UIViewController {
     // MARK: - Properties
     var listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     var phoneNumberText = ""
+    var codeSent = false
+    
+    var presenter: AuthPresenter!
     
     // MARK: - ViewControllers life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         countryCode.delegate = self
+        
+        presenter = AuthPresenter()
+        presenter.delegate = self
     }
-
+    
     // MARK: - Interface Actions
     @IBAction func signInWithNumPressed(_ sender: UIButton) {
-//        let verify = STORYBOARD.instantiateViewController(withIdentifier: "ConfirmNumber")
-//        verify?.phoneNumber = phoneNumberText
-//        self.view.window?.rootViewController = verify!
+        HUD.show(.progress)
+        if !codeSent {
+            presenter.verifyPhone(authModel: AuthModel(phoneNumber: phoneNumberText))
+        }else{
+            presenter.confirmCode(verification: PhoneVerification(code: self.verificationCode.text ?? ""))
+        }
         
     }
 }
@@ -39,13 +50,13 @@ class SignInViewController: UIViewController {
 extension SignInViewController {
     fileprivate func setupUI() {
         self.halfHeight.constant = self.view.frame.height/2
-        self.halfView.backgroundColor = EDHI_PRIMARY
-        self.signInWithNUmBtn.backgroundColor = EDHI_PRIMARY
+        self.signInWithNUmBtn.addShadow()
+        self.signInWithNUmBtn.backgroundColor = UIColor.black
         self.signInWithNUmBtn.layer.cornerRadius = 8
-        
+        self.verificationCode.isHidden = true
         // Flag Field
-        countryCode.layer.borderColor =  UIColor(hexString: LIGHT_GREY_COLOR).cgColor
-        countryCode.layer.borderWidth = 1.0
+        countryCode.setFlag(key: .PK)
+        countryCode.placeholder = "3332012717"
         countryCode.layer.cornerRadius = 8.0
         countryCode.displayMode = .list
         listController.setup(repository: countryCode.countryRepository)
@@ -75,5 +86,23 @@ extension SignInViewController: FPNTextFieldDelegate {
         }else{
             phoneNumberText = ""
         }
+    }
+}
+// MARK: - Auth Delegates
+extension SignInViewController: AuthDelegate {
+    func verificationCodeSent() {
+        HUD.hide()
+        self.verificationCode.isHidden = false
+        self.codeSent = true
+    }
+    
+    func phoneNumberConfirmed() {
+        HUD.hide()
+        Navigator.setHomeRoot(window: self.view.window ?? UIWindow())
+    }
+    
+    func error(message: String) {
+        HUD.hide()
+        PopUp.shared.show(view: self, message: message)
     }
 }

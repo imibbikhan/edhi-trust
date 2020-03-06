@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1068539222867-632f0tb8vfmin3t05h0cubl6rfqd9cvf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1068539222867-632f0tb8vfmin3t05h0cubl6rfqd9cvf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDaWw0bN5VFakfJkFEJ5p_DzKj4Cfd23Vc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1068539222867</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.edhi-trust</string>
+	<key>PROJECT_ID</key>
+	<string>edhi-welfare-trust</string>
+	<key>STORAGE_BUCKET</key>
+	<string>edhi-welfare-trust.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1068539222867:ios:9779894eea72fd819cdfa6</string>
+	<key>DATABASE_URL</key>
+	<string>https://edhi-welfare-trust.firebaseio.com</string>
+</dict>
+</plist>

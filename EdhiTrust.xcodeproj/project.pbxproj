@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		509B2A97F7BECFBC588D34A0 /* Pods_EdhiTrust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9EB35D4D9DD60286F0E608 /* Pods_EdhiTrust.framework */; };
+		EE0301882411F78A004F873B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE0301872411F78A004F873B /* GoogleService-Info.plist */; };
+		EE03018B2411FB4D004F873B /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03018A2411FB4D004F873B /* AuthPresenter.swift */; };
+		EE03018F2411FBAC004F873B /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03018E2411FBAC004F873B /* AuthModel.swift */; };
+		EE0301922411FC16004F873B /* AuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0301912411FC16004F873B /* AuthDelegate.swift */; };
+		EE0301942411FE52004F873B /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0301932411FE52004F873B /* FloatButton.swift */; };
+		EE03019624120092004F873B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03019524120092004F873B /* SignInViewController.swift */; };
+		EE03019A24120899004F873B /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03019924120899004F873B /* Navigator.swift */; };
 		EE31138823C6ECFB006EFF1E /* GenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE31138723C6ECFB006EFF1E /* GenderView.xib */; };
 		EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE31138923C6EDE6006EFF1E /* GenderView.swift */; };
 		EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */; };
@@ -19,7 +26,6 @@
 		EE51A1AB23C499B3007602CF /* PostBloodRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */; };
 		EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */; };
 		EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */; };
-		EE95DD0523C307B000BFC0EB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0423C307B000BFC0EB /* SignInViewController.swift */; };
 		EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0723C309D200BFC0EB /* Constants.swift */; };
 		EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0923C30A1800BFC0EB /* Extension.swift */; };
 		EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC0D4CB23C8ABB400829B30 /* MissingView.swift */; };
@@ -43,6 +49,13 @@
 		2A9EB35D4D9DD60286F0E608 /* Pods_EdhiTrust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EdhiTrust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1194EF4F65149B679A006D /* Pods-EdhiTrust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdhiTrust.debug.xcconfig"; path = "Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust.debug.xcconfig"; sourceTree = "<group>"; };
 		A4E619D75221AE2C9BA17BCC /* Pods-EdhiTrust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdhiTrust.release.xcconfig"; path = "Target Support Files/Pods-EdhiTrust/Pods-EdhiTrust.release.xcconfig"; sourceTree = "<group>"; };
+		EE0301872411F78A004F873B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE03018A2411FB4D004F873B /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		EE03018E2411FBAC004F873B /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		EE0301912411FC16004F873B /* AuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDelegate.swift; sourceTree = "<group>"; };
+		EE0301932411FE52004F873B /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
+		EE03019524120092004F873B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EE03019924120899004F873B /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		EE31138723C6ECFB006EFF1E /* GenderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderView.xib; sourceTree = "<group>"; };
 		EE31138923C6EDE6006EFF1E /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
 		EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMissingViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +67,6 @@
 		EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBloodRequestViewController.swift; sourceTree = "<group>"; };
 		EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersDetailsViewController.swift; sourceTree = "<group>"; };
 		EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmbulancesViewController.swift; sourceTree = "<group>"; };
-		EE95DD0423C307B000BFC0EB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE95DD0723C309D200BFC0EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE95DD0923C30A1800BFC0EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EEC0D4CB23C8ABB400829B30 /* MissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingView.swift; sourceTree = "<group>"; };
@@ -103,6 +115,38 @@
 				A4E619D75221AE2C9BA17BCC /* Pods-EdhiTrust.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE0301892411FB3C004F873B /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EE03018A2411FB4D004F873B /* AuthPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		EE03018C2411FB89004F873B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE03019524120092004F873B /* SignInViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EE03018D2411FB99004F873B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE03018E2411FBAC004F873B /* AuthModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE0301902411FC00004F873B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EE0301912411FC16004F873B /* AuthDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		EE31138623C6E81C006EFF1E /* GenderView */ = {
@@ -161,7 +205,10 @@
 		EE95DD0323C3079E00BFC0EB /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				EE95DD0423C307B000BFC0EB /* SignInViewController.swift */,
+				EE0301902411FC00004F873B /* Delegates */,
+				EE03018D2411FB99004F873B /* Models */,
+				EE03018C2411FB89004F873B /* ViewControllers */,
+				EE0301892411FB3C004F873B /* Presenters */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -174,6 +221,8 @@
 				EE95DD0923C30A1800BFC0EB /* Extension.swift */,
 				EEEB0A3A23C3655B0005E291 /* RoundShadowView.swift */,
 				EEEB0A4423C37F4D0005E291 /* PopUpDailogue.swift */,
+				EE0301932411FE52004F873B /* FloatButton.swift */,
+				EE03019924120899004F873B /* Navigator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -220,6 +269,7 @@
 				EEC26E8123C3023400AC6C4B /* Main.storyboard */,
 				EEC26E8423C3023600AC6C4B /* Assets.xcassets */,
 				EEC26E8623C3023600AC6C4B /* LaunchScreen.storyboard */,
+				EE0301872411F78A004F873B /* GoogleService-Info.plist */,
 				EEC26E8923C3023600AC6C4B /* Info.plist */,
 			);
 			path = EdhiTrust;
@@ -365,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0301882411F78A004F873B /* GoogleService-Info.plist in Resources */,
 				EE51A1A923C493FF007602CF /* IconTextFieldView.xib in Resources */,
 				EEC865A0240E5F4200D84AEC /* BloodView.xib in Resources */,
 				EE31138823C6ECFB006EFF1E /* GenderView.xib in Resources */,
@@ -444,23 +495,28 @@
 			files = (
 				EEEB0A4323C37E660005E291 /* AmbulancesViewController.swift in Sources */,
 				EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */,
+				EE0301922411FC16004F873B /* AuthDelegate.swift in Sources */,
+				EE03019A24120899004F873B /* Navigator.swift in Sources */,
 				EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */,
 				EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */,
 				EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */,
 				EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */,
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
+				EE03019624120092004F873B /* SignInViewController.swift in Sources */,
 				EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */,
 				EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */,
+				EE0301942411FE52004F873B /* FloatButton.swift in Sources */,
 				EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */,
 				EE456D13240F503B004D06AA /* AmbulanceViewViewController.swift in Sources */,
-				EE95DD0523C307B000BFC0EB /* SignInViewController.swift in Sources */,
 				EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */,
 				EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */,
 				EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */,
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
+				EE03018B2411FB4D004F873B /* AuthPresenter.swift in Sources */,
 				EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */,
 				EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */,
 				EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */,
+				EE03018F2411FBAC004F873B /* AuthModel.swift in Sources */,
 				EE51A1A823C493FF007602CF /* IconTextFieldView.swift in Sources */,
 				EE51A1AB23C499B3007602CF /* PostBloodRequestViewController.swift in Sources */,
 			);
