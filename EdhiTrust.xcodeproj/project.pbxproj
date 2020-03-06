@@ -25,6 +25,12 @@
 		EE51A1A923C493FF007602CF /* IconTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE51A1A723C493FF007602CF /* IconTextFieldView.xib */; };
 		EE51A1AB23C499B3007602CF /* PostBloodRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */; };
 		EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */; };
+		EE5C490024125E8B00783D9B /* StringPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C48FF24125E8B00783D9B /* StringPicker.swift */; };
+		EE5C4903241262FB00783D9B /* PostBloodRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C4902241262FB00783D9B /* PostBloodRequestPresenter.swift */; };
+		EE5C49062412633200783D9B /* BloodRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C49052412633200783D9B /* BloodRequestModel.swift */; };
+		EE5C49092412634700783D9B /* BloodRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C49082412634700783D9B /* BloodRequestDelegate.swift */; };
+		EE5C490C2412676400783D9B /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C490B2412676400783D9B /* DBHandler.swift */; };
+		EE6D7A8324129583001D71BD /* BloodRequestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D7A8224129583001D71BD /* BloodRequestsPresenter.swift */; };
 		EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */; };
 		EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0723C309D200BFC0EB /* Constants.swift */; };
 		EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0923C30A1800BFC0EB /* Extension.swift */; };
@@ -66,6 +72,12 @@
 		EE51A1A723C493FF007602CF /* IconTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconTextFieldView.xib; sourceTree = "<group>"; };
 		EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBloodRequestViewController.swift; sourceTree = "<group>"; };
 		EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersDetailsViewController.swift; sourceTree = "<group>"; };
+		EE5C48FF24125E8B00783D9B /* StringPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringPicker.swift; sourceTree = "<group>"; };
+		EE5C4902241262FB00783D9B /* PostBloodRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBloodRequestPresenter.swift; sourceTree = "<group>"; };
+		EE5C49052412633200783D9B /* BloodRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestModel.swift; sourceTree = "<group>"; };
+		EE5C49082412634700783D9B /* BloodRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestDelegate.swift; sourceTree = "<group>"; };
+		EE5C490B2412676400783D9B /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
+		EE6D7A8224129583001D71BD /* BloodRequestsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsPresenter.swift; sourceTree = "<group>"; };
 		EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmbulancesViewController.swift; sourceTree = "<group>"; };
 		EE95DD0723C309D200BFC0EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE95DD0923C30A1800BFC0EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -194,6 +206,39 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		EE5C4901241262DC00783D9B /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C4902241262FB00783D9B /* PostBloodRequestPresenter.swift */,
+				EE6D7A8224129583001D71BD /* BloodRequestsPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		EE5C49042412631E00783D9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C49052412633200783D9B /* BloodRequestModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE5C49072412633600783D9B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C49082412634700783D9B /* BloodRequestDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EE5C490A2412675000783D9B /* DBHandler */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C490B2412676400783D9B /* DBHandler.swift */,
+			);
+			path = DBHandler;
+			sourceTree = "<group>";
+		};
 		EE95DD0223C306FD00BFC0EB /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +268,7 @@
 				EEEB0A4423C37F4D0005E291 /* PopUpDailogue.swift */,
 				EE0301932411FE52004F873B /* FloatButton.swift */,
 				EE03019924120899004F873B /* Navigator.swift */,
+				EE5C48FF24125E8B00783D9B /* StringPicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -257,6 +303,7 @@
 		EEC26E7A23C3023400AC6C4B /* EdhiTrust */ = {
 			isa = PBXGroup;
 			children = (
+				EE5C490A2412675000783D9B /* DBHandler */,
 				EE56668723CC0D3A005A7415 /* Center Details */,
 				EE95DD0623C309BF00BFC0EB /* Helpers */,
 				EE51A1A423C493D9007602CF /* CustomViews */,
@@ -287,6 +334,9 @@
 		EED5D4B223C39B6800F516A0 /* Blood Requests */ = {
 			isa = PBXGroup;
 			children = (
+				EE5C49072412633600783D9B /* Delegate */,
+				EE5C49042412631E00783D9B /* Models */,
+				EE5C4901241262DC00783D9B /* Presenters */,
 				EED5D4B323C39B7E00F516A0 /* ViewControllers */,
 			);
 			path = "Blood Requests";
@@ -497,6 +547,7 @@
 				EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */,
 				EE0301922411FC16004F873B /* AuthDelegate.swift in Sources */,
 				EE03019A24120899004F873B /* Navigator.swift in Sources */,
+				EE5C490C2412676400783D9B /* DBHandler.swift in Sources */,
 				EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */,
 				EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */,
 				EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */,
@@ -506,17 +557,22 @@
 				EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */,
 				EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */,
 				EE0301942411FE52004F873B /* FloatButton.swift in Sources */,
+				EE5C4903241262FB00783D9B /* PostBloodRequestPresenter.swift in Sources */,
 				EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */,
 				EE456D13240F503B004D06AA /* AmbulanceViewViewController.swift in Sources */,
 				EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */,
 				EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */,
+				EE5C49062412633200783D9B /* BloodRequestModel.swift in Sources */,
 				EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */,
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
 				EE03018B2411FB4D004F873B /* AuthPresenter.swift in Sources */,
 				EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */,
 				EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */,
 				EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */,
+				EE5C49092412634700783D9B /* BloodRequestDelegate.swift in Sources */,
+				EE6D7A8324129583001D71BD /* BloodRequestsPresenter.swift in Sources */,
 				EE03018F2411FBAC004F873B /* AuthModel.swift in Sources */,
+				EE5C490024125E8B00783D9B /* StringPicker.swift in Sources */,
 				EE51A1A823C493FF007602CF /* IconTextFieldView.swift in Sources */,
 				EE51A1AB23C499B3007602CF /* PostBloodRequestViewController.swift in Sources */,
 			);

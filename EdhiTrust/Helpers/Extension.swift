@@ -156,6 +156,11 @@ extension UIButton {
         self.layer.borderWidth = 0.3
         self.layer.borderColor = UIColor.lightGray.cgColor
     }
+    func narrowShadow() {
+        self.layer.cornerRadius = 5.0
+        self.layer.borderColor = UIColor(hexString: LIGHT_GREY_COLOR).cgColor
+        self.layer.borderWidth = 1.0
+    }
 }
 extension UIView {
     func roundCorner(radius: CGFloat) {

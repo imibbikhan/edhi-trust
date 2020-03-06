@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import Firebase
+import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -17,15 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         GMSServices.provideAPIKey(GOOGLE_MAP_KEY)
         GMSPlacesClient.provideAPIKey(GOOGLE_MAP_KEY)
-//        checkLogin()
+        IQKeyboardManager.shared.enable = true
+        checkLogin()
         return true
     }
     func checkLogin() {
         guard let _ = Auth.auth().currentUser?.uid else {
-            Navigator.setSignInRoot(window: window ?? UIWindow())
+            Navigator.setRoot(window: window ?? UIWindow(), route: Routes.signIn)
             return
         }
-        Navigator.setHomeRoot(window: window ?? UIWindow())
+        Navigator.setRoot(window: window ?? UIWindow(), route: Routes.home)
     }
 }
 

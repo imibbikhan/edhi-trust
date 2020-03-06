@@ -11,6 +11,8 @@ class BloodView: UIView {
     // MARK: - Interface Outlets
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var bloodTitle: UILabel!
+    @IBOutlet weak var bloodTitle2: UILabel!
+    @IBOutlet weak var location: UILabel!
     @IBOutlet weak var callBtn: UIButton!
     // MARK: - Properties
     let XIB_NAME = "BloodView"

@@ -7,17 +7,27 @@
 //
 //
 import UIKit
-
+import PKHUD
 class BloodRequestsViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Properties
+    var presenter: BloodRequestsPresenter!
+    var allMyRequests: [BloodRequestModel]!
+    
     // MARK: - ViewControllers life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        allMyRequests = [BloodRequestModel]()
         setupUI()
         setupTableView()
         
+        
+        presenter = BloodRequestsPresenter()
+        presenter.delegate = self
+        HUD.show(.progress)
+        presenter.getMyRequests(allRequests: true)
     }
     
     
@@ -45,25 +55,41 @@ extension BloodRequestsViewController: UITableViewDelegate, UITableViewDataSourc
         return 160
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.allMyRequests.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell") as? RequestCell
+        let bloodView = cell?.bloodView
+        let request = allMyRequests[indexPath.row]
+        
+        bloodView?.bloodTitle.text = request.bloodGroup
+        bloodView?.location.text = request.referCity
         return cell!
+    }
+    
+    
+}
+// MARK: - BloodRequestsDelegates
+extension BloodRequestsViewController: BloodRequestsDelegate {
+    func requestsFetched(requests: [BloodRequestModel]) {
+        HUD.hide()
+        self.allMyRequests = requests
+        self.tableView.reloadData()
+        print(allMyRequests)
+    }
+    
+    func error(message: String) {
+        HUD.hide()
+        PopUp.shared.show(view: self, message: message)
     }
     
     
 }
 // MARK: - TableViewCell
 class RequestCell: UITableViewCell {
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var bloodGroup: UILabel!
-    @IBOutlet weak var location: UILabel!
-    @IBOutlet weak var photo: UIImageView!
-     @IBOutlet weak var callBtn: UIButton!
+    @IBOutlet weak var bloodView: BloodView!
     override func awakeFromNib() {
-        photo.roundCorner(radius: 10)
-        callBtn.corners(radius: 10)
+
     }
 }

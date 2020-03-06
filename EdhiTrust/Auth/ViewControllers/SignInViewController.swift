@@ -98,7 +98,7 @@ extension SignInViewController: AuthDelegate {
     
     func phoneNumberConfirmed() {
         HUD.hide()
-        Navigator.setHomeRoot(window: self.view.window ?? UIWindow())
+        Navigator.setRoot(window: self.view.window ?? UIWindow(), route: Routes.home)
     }
     
     func error(message: String) {

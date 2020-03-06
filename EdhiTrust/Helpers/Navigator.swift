@@ -19,12 +19,8 @@ class Navigator {
         let vc = STORYBOARD.instantiateViewController(withIdentifier: id)
         from.navigationController?.pushViewController(vc, animated: true)
     }
-    static func setHomeRoot(window: UIWindow) {
-        let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.home.rawValue)
-        window.rootViewController = vc
-    }
-    static func setSignInRoot(window: UIWindow) {
-        let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.signIn.rawValue)
+    static func setRoot(window: UIWindow, route: Routes) {
+        let vc = STORYBOARD.instantiateViewController(withIdentifier: route.rawValue)
         window.rootViewController = vc
     }
 }

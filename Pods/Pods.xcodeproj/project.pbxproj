@@ -5060,12 +5060,12 @@
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
-		A98E39A2BCB751F2B1AE6CF5F450DD73 /* Targets Support Files */ = {
+		A98E39A2BCB751F2B1AE6CF5F450DD73 /* \ */ = {
 			isa = PBXGroup;
 			children = (
 				DBA9EEB1DC6DAEF5AB91632603285AE2 /* Pods-EdhiTrust */,
 			);
-			name = "Targets Support Files";
+			name = "\\";
 			sourceTree = "<group>";
 		};
 		ACDEA5886E82291F3E64270276D7F860 /* Support Files */ = {
@@ -5348,7 +5348,7 @@
 				7006A856179CEB79C2FA66378ADB3C30 /* Frameworks */,
 				6FCF6D72E95363879F70165FB1307942 /* Pods */,
 				2BBC3D943861AE8A719BFD3EA250D71E /* Products */,
-				A98E39A2BCB751F2B1AE6CF5F450DD73 /* Targets Support Files */,
+				A98E39A2BCB751F2B1AE6CF5F450DD73 /* \ */,
 			);
 			sourceTree = "<group>";
 		};
