@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         GMSServices.provideAPIKey(GOOGLE_MAP_KEY)
         GMSPlacesClient.provideAPIKey(GOOGLE_MAP_KEY)
-        checkLogin()
+//        checkLogin()
         return true
     }
     func checkLogin() {
