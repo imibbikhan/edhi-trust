@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 enum Routes: String {
     case home = "StartHome"
-    case missingsDonationsHome = "AllMissingsDonations"
+    case missingsDonationsHome = "Home"
     case signIn = "SignIn"
     case editProfile = "EditProfile"
     case viewBloodRequest = "ViewBloodRequest"

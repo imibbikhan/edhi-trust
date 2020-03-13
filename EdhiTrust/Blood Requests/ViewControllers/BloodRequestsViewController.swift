@@ -27,7 +27,11 @@ class BloodRequestsViewController: UIViewController {
         presenter = BloodRequestsPresenter()
         presenter.delegate = self
         HUD.show(.progress)
-        presenter.getMyRequests(allRequests: true)
+        if let _ = tabBarController {
+            presenter.getMyRequests(allRequests: true)
+            return
+        }
+        presenter.getMyRequests(allRequests: false)
     }
     
     
@@ -37,7 +41,14 @@ extension BloodRequestsViewController {
     fileprivate func setupUI() {
         self.navigationItem.title = "Blood Requests"
         
-        let btn = FloatButton(controller: self)
+        // If there is bottom Nav it will give -90 padding from bottom.
+        var btnBottom: CGFloat = -50
+        if let tabBar = self.tabBarController {
+            tabBar.navigationItem.title = "Blood Requests"
+            btnBottom = -90
+        }
+        
+        let btn = FloatButton(controller: self, spaceBottom: btnBottom)
         btn.buttonTapped = {
             let vc = STORYBOARD.instantiateViewController(withIdentifier: "PostBloodRequest")
             self.navigationController?.pushViewController(vc, animated: true)

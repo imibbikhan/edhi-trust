@@ -27,7 +27,14 @@ extension MissingsViewController {
     fileprivate func setupUI() {
         self.navigationItem.title = "Missings"
         
-        let btn = FloatButton(controller: self)
+        // If there is bottom Nav it will give -90 padding from bottom.
+        var btnBottom: CGFloat = -50
+        if let tabBar = self.tabBarController {
+            tabBar.navigationItem.title = "Missings"
+            btnBottom = -90
+        }
+        
+        let btn = FloatButton(controller: self, spaceBottom: btnBottom)
         btn.buttonTapped = {
             let vc = STORYBOARD.instantiateViewController(withIdentifier: "PostMissings")
             self.navigationController?.pushViewController(vc, animated: true)

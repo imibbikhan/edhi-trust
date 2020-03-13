@@ -691,6 +691,7 @@
         <!--Blood-->
         <scene sceneID="TkU-Zr-uxU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pp5-7L-mwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="15s-RD-KFo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qgq-FX-BpN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -700,13 +701,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Blood" image="bloodRe" id="W38-24-TLX"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pp5-7L-mwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4732" y="104"/>
         </scene>
         <!--Missings-->
         <scene sceneID="2hg-QC-da1">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ned-9U-hNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="UrV-Ux-Zgn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iub-ZL-jMf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -716,11 +717,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Missings" image="missing" id="VEI-ZK-rTI"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ned-9U-hNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5678" y="102"/>
         </scene>
-        <!--Blood Requests View Controller-->
+        <!--Blood Requests-->
         <scene sceneID="XZS-2e-aOW">
             <objects>
                 <viewController storyboardIdentifier="Blood" id="jvr-3v-TlD" customClass="BloodRequestsViewController" customModule="EdhiTrust" customModuleProvider="target" sceneMemberID="viewController">
@@ -729,7 +729,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ST2-gD-Zoe">
-                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RequestCell" rowHeight="191" id="Tkl-XR-DgE" customClass="RequestCell" customModule="EdhiTrust" customModuleProvider="target">
@@ -767,6 +767,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aCB-Xw-63s"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Blood Requests" image="bloodRe" selectedImage="bloodRe" id="Wa8-CW-IhX"/>
                     <connections>
                         <outlet property="tableView" destination="ST2-gD-Zoe" id="v7p-ED-W5e"/>
                     </connections>
@@ -1238,7 +1239,7 @@
             </objects>
             <point key="canvasLocation" x="4265.217391304348" y="-911.38392857142856"/>
         </scene>
-        <!--Missings View Controller-->
+        <!--Missings-->
         <scene sceneID="PZU-tj-6xd">
             <objects>
                 <viewController storyboardIdentifier="Missings" id="YKC-cf-act" customClass="MissingsViewController" customModule="EdhiTrust" customModuleProvider="target" sceneMemberID="viewController">
@@ -1247,7 +1248,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-j1-XuJ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="missingCell" rowHeight="208" id="c3m-ro-YBr">
@@ -1282,6 +1283,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tyZ-Dy-yP4"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Missings" image="missing" selectedImage="missing" id="0rQ-Pc-ckX"/>
                     <connections>
                         <outlet property="tableView" destination="bIF-j1-XuJ" id="SPW-25-9Pi"/>
                     </connections>
@@ -1723,7 +1725,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="02l-D9-zYO">
             <objects>
-                <tabBarController storyboardIdentifier="AllMissingsDonations" automaticallyAdjustsScrollViewInsets="NO" id="PtK-nG-EKG" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="PtK-nG-EKG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ceh-mo-nOC">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1731,8 +1733,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="UrV-Ux-Zgn" kind="relationship" relationship="viewControllers" id="QQu-cH-OYI"/>
-                        <segue destination="15s-RD-KFo" kind="relationship" relationship="viewControllers" id="pSc-9k-2uK"/>
+                        <segue destination="YKC-cf-act" kind="relationship" relationship="viewControllers" id="tZy-AS-5zh"/>
+                        <segue destination="jvr-3v-TlD" kind="relationship" relationship="viewControllers" id="OYe-C8-4Ds"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSe-Dy-18X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

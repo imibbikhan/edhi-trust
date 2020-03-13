@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 class FloatButton: UIView {
+    var spaceBottom: CGFloat
     var target: UIViewController
     var buttonTapped: (()->Void)?
     
     var title = UILabel()
-    required init(controller: UIViewController){
+    required init(controller: UIViewController, spaceBottom: CGFloat = -50){
         target = controller
+        self.spaceBottom = spaceBottom
         super.init(frame: CGRect.zero)
         self.addSubview(title)
         common()
@@ -49,7 +51,7 @@ class FloatButton: UIView {
             self.heightAnchor.constraint(equalToConstant: 60),
             self.widthAnchor.constraint(equalToConstant: 60),
             self.trailingAnchor.constraint(equalTo: target.view.trailingAnchor, constant: -30),
-            self.bottomAnchor.constraint(equalTo: target.view.bottomAnchor, constant: -50),
+            self.bottomAnchor.constraint(equalTo: target.view.bottomAnchor, constant: spaceBottom),
         ])
     }
 }

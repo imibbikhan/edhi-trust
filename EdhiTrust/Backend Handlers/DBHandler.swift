@@ -31,11 +31,11 @@ class DBHandler {
         if !allRequests {
             query = FB_DB_REF.child("blood_requests")
         }
+        
         var requests = [BloodRequestModel]()
         query.observe(.value, with: { (snapShot) in
             requests.removeAll()
             for case let request as DataSnapshot in snapShot.children {
-                print(request)
                 do {
                     
                     let decodedRequest = try FirebaseDecoder().decode(BloodRequestModel.self, from: request.value!)
