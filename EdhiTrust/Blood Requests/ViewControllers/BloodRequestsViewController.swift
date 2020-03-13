@@ -51,6 +51,9 @@ extension BloodRequestsViewController {
 }
 // MARK: - TableView Delegate And DataSource
 extension BloodRequestsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Navigator.toViewBloodRequest(request: allMyRequests[indexPath.row], from: self)
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
@@ -65,6 +68,7 @@ extension BloodRequestsViewController: UITableViewDelegate, UITableViewDataSourc
         
         bloodView?.bloodTitle.text = request.bloodGroup
         bloodView?.location.text = request.referCity
+        bloodView?.bloodFor.text = request.bloodFor
         return cell!
     }
     
@@ -73,10 +77,11 @@ extension BloodRequestsViewController: UITableViewDelegate, UITableViewDataSourc
 // MARK: - BloodRequestsDelegates
 extension BloodRequestsViewController: BloodRequestsDelegate {
     func requestsFetched(requests: [BloodRequestModel]) {
-        HUD.hide()
-        self.allMyRequests = requests
-        self.tableView.reloadData()
-        print(allMyRequests)
+        DispatchQueue.main.async {
+            HUD.hide()
+            self.allMyRequests = requests
+            self.tableView.reloadData()
+        }
     }
     
     func error(message: String) {

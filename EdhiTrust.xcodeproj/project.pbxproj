@@ -38,6 +38,7 @@
 		EE5C49092412634700783D9B /* BloodRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C49082412634700783D9B /* BloodRequestDelegate.swift */; };
 		EE6D7A8324129583001D71BD /* BloodRequestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D7A8224129583001D71BD /* BloodRequestsPresenter.swift */; };
 		EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */; };
+		EE7956AC241B87740056118E /* ViewBloodRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */; };
 		EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0723C309D200BFC0EB /* Constants.swift */; };
 		EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0923C30A1800BFC0EB /* Extension.swift */; };
 		EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC0D4CB23C8ABB400829B30 /* MissingView.swift */; };
@@ -91,6 +92,7 @@
 		EE5C49082412634700783D9B /* BloodRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestDelegate.swift; sourceTree = "<group>"; };
 		EE6D7A8224129583001D71BD /* BloodRequestsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsPresenter.swift; sourceTree = "<group>"; };
 		EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmbulancesViewController.swift; sourceTree = "<group>"; };
+		EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBloodRequestViewController.swift; sourceTree = "<group>"; };
 		EE95DD0723C309D200BFC0EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE95DD0923C30A1800BFC0EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EEC0D4CB23C8ABB400829B30 /* MissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingView.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */,
 				EE51A1A223C49017007602CF /* BloodRequestsViewController.swift */,
 				EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */,
+				EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
 				EE03018B2411FB4D004F873B /* AuthPresenter.swift in Sources */,
 				EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */,
+				EE7956AC241B87740056118E /* ViewBloodRequestViewController.swift in Sources */,
 				EE4453FC241B2B0B00AD0F80 /* ProfileModel.swift in Sources */,
 				EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */,
 				EE445402241B2BF200AD0F80 /* EditProfileDelegate.swift in Sources */,

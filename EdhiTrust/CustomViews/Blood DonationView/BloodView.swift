@@ -12,6 +12,7 @@ class BloodView: UIView {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var bloodTitle: UILabel!
     @IBOutlet weak var bloodTitle2: UILabel!
+    @IBOutlet weak var bloodFor: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var callBtn: UIButton!
     // MARK: - Properties
@@ -35,8 +36,7 @@ class BloodView: UIView {
         setupUI()
     }
     func setupUI() {
-        callBtn.layer.borderWidth = 0.2
-        callBtn.layer.borderColor = UIColor.lightGray.cgColor
+        callBtn.setupLightBtn()
         backView.backgroundColor = BLOOD_COLOR
     }
 }

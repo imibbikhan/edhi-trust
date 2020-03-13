@@ -141,6 +141,7 @@ extension UIButton {
     func styleSecondaryBtn() {
         self.backgroundColor = UIColor(hexString: LIGHT_GREY_COLOR)
         self.roundBtn(corners: 5)
+        
     }
     func corners(radius: CGFloat) {
         self.layer.cornerRadius = radius
@@ -160,6 +161,10 @@ extension UIButton {
         self.layer.cornerRadius = 5.0
         self.layer.borderColor = UIColor(hexString: LIGHT_GREY_COLOR).cgColor
         self.layer.borderWidth = 1.0
+    }
+    func setupLightBtn() {
+        self.layer.borderWidth = 0.2
+        self.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
 extension UIView {

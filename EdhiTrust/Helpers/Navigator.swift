@@ -13,6 +13,7 @@ enum Routes: String {
     case missingsDonationsHome = "AllMissingsDonations"
     case signIn = "SignIn"
     case editProfile = "EditProfile"
+    case viewBloodRequest = "ViewBloodRequest"
 }
 class Navigator {
     static func navigate(route to: Routes, from: UIViewController) {
@@ -23,5 +24,10 @@ class Navigator {
     static func setRoot(window: UIWindow, route: Routes) {
         let vc = STORYBOARD.instantiateViewController(withIdentifier: route.rawValue)
         window.rootViewController = vc
+    }
+    static func toViewBloodRequest(request: BloodRequestModel, from: UIViewController) {
+        let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.viewBloodRequest.rawValue) as? ViewBloodRequestViewController
+        vc?.bloodRequest = request
+        from.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 }

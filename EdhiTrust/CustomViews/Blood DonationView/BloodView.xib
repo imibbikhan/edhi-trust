@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodView" customModule="EdhiTrust" customModuleProvider="target">
             <connections>
                 <outlet property="backView" destination="e9W-3P-x8f" id="9hx-6X-ey0"/>
+                <outlet property="bloodFor" destination="VQ4-E3-htw" id="LI2-07-hOa"/>
                 <outlet property="bloodTitle" destination="V00-Os-l8Y" id="jpS-xh-Zgf"/>
                 <outlet property="bloodTitle2" destination="4qT-AQ-Ayl" id="7pA-Ke-U9K"/>
                 <outlet property="callBtn" destination="7B3-lD-yvK" id="YCi-ll-UPn"/>
