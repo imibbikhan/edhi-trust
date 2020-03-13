@@ -25,7 +25,7 @@
 		EE4453FC241B2B0B00AD0F80 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4453FB241B2B0B00AD0F80 /* ProfileModel.swift */; };
 		EE4453FF241B2BE200AD0F80 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4453FE241B2BE200AD0F80 /* EditProfilePresenter.swift */; };
 		EE445402241B2BF200AD0F80 /* EditProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE445401241B2BF200AD0F80 /* EditProfileDelegate.swift */; };
-		EE445404241B320300AD0F80 /* DBhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE445403241B320300AD0F80 /* DBhandler.swift */; };
+		EE445404241B320300AD0F80 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE445403241B320300AD0F80 /* DBHandler.swift */; };
 		EE456D13240F503B004D06AA /* AmbulanceViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE456D12240F503B004D06AA /* AmbulanceViewViewController.swift */; };
 		EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51A1A223C49017007602CF /* BloodRequestsViewController.swift */; };
 		EE51A1A823C493FF007602CF /* IconTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51A1A623C493FE007602CF /* IconTextFieldView.swift */; };
@@ -79,7 +79,7 @@
 		EE4453FB241B2B0B00AD0F80 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		EE4453FE241B2BE200AD0F80 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
 		EE445401241B2BF200AD0F80 /* EditProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDelegate.swift; sourceTree = "<group>"; };
-		EE445403241B320300AD0F80 /* DBhandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBhandler.swift; sourceTree = "<group>"; };
+		EE445403241B320300AD0F80 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		EE456D12240F503B004D06AA /* AmbulanceViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbulanceViewViewController.swift; sourceTree = "<group>"; };
 		EE51A1A223C49017007602CF /* BloodRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsViewController.swift; sourceTree = "<group>"; };
 		EE51A1A623C493FE007602CF /* IconTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTextFieldView.swift; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 		EE5C490A2412675000783D9B /* Backend Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				EE445403241B320300AD0F80 /* DBhandler.swift */,
+				EE445403241B320300AD0F80 /* DBHandler.swift */,
 				EE4453F6241B2A2800AD0F80 /* STHandler.swift */,
 				EE4453F8241B2A9100AD0F80 /* User.swift */,
 			);
@@ -616,7 +616,7 @@
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
 				EE03019624120092004F873B /* SignInViewController.swift in Sources */,
 				EE4453F7241B2A2800AD0F80 /* STHandler.swift in Sources */,
-				EE445404241B320300AD0F80 /* DBhandler.swift in Sources */,
+				EE445404241B320300AD0F80 /* DBHandler.swift in Sources */,
 				EE4453F5241B1F5B00AD0F80 /* EditProfileViewController.swift in Sources */,
 				EE4453F9241B2A9100AD0F80 /* User.swift in Sources */,
 				EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */,
