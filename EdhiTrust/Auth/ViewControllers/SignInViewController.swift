@@ -50,9 +50,7 @@ class SignInViewController: UIViewController {
 extension SignInViewController {
     fileprivate func setupUI() {
         self.halfHeight.constant = self.view.frame.height/2
-        self.signInWithNUmBtn.addShadow()
-        self.signInWithNUmBtn.backgroundColor = UIColor.black
-        self.signInWithNUmBtn.layer.cornerRadius = 8
+        self.signInWithNUmBtn.stylePrimaryBtn()
         self.verificationCode.isHidden = true
         // Flag Field
         countryCode.setFlag(key: .PK)
@@ -99,6 +97,11 @@ extension SignInViewController: AuthDelegate {
     func phoneNumberConfirmed() {
         HUD.hide()
         Navigator.setRoot(window: self.view.window ?? UIWindow(), route: Routes.home)
+    }
+    
+    func profileNotSet() {
+        HUD.hide()
+        Navigator.setRoot(window: self.view.window ?? UIWindow(), route: .editProfile)
     }
     
     func error(message: String) {

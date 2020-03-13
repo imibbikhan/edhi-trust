@@ -126,6 +126,145 @@
             </objects>
             <point key="canvasLocation" x="139" y="102"/>
         </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="6b5-cf-j5D">
+            <objects>
+                <viewController storyboardIdentifier="EditProfile" id="DcD-7I-2FD" customClass="EditProfileViewController" customModule="EdhiTrust" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSo-Uq-LlN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nY-QM-jWa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="ihO-2K-1rc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-bl-od2" customClass="RoundShadowView" customModule="EdhiTrust" customModuleProvider="target">
+                                <rect key="frame" x="20" y="168" width="374" height="560"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hdK-gW-vA2">
+                                        <rect key="frame" x="16" y="55.5" width="342" height="449.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EDHI TRUST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBU-WK-rTr">
+                                                <rect key="frame" x="101.5" y="0.0" width="139.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2m8-BR-x9F">
+                                                <rect key="frame" x="0.0" y="69" width="342" height="380.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpz-33-ztP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-P0-ABZ">
+                                                        <rect key="frame" x="111" y="50.5" width="120" height="120"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="QSU-a7-Azr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-Jv-anP">
+                                                                <rect key="frame" x="68" y="68" width="62" height="62"/>
+                                                                <state key="normal" image="uploadIcon"/>
+                                                                <connections>
+                                                                    <action selector="pickImageClicked:" destination="DcD-7I-2FD" eventType="touchUpInside" id="fiQ-vv-HQ1"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="UQU-Jv-anP" secondAttribute="bottom" constant="-10" id="3L3-Ym-rbY"/>
+                                                            <constraint firstAttribute="trailing" secondItem="UQU-Jv-anP" secondAttribute="trailing" constant="-10" id="5TM-8o-jFN"/>
+                                                            <constraint firstAttribute="bottom" secondItem="QSU-a7-Azr" secondAttribute="bottom" id="9Gi-16-Ujw"/>
+                                                            <constraint firstAttribute="width" constant="120" id="SBJ-30-d5b"/>
+                                                            <constraint firstAttribute="trailing" secondItem="QSU-a7-Azr" secondAttribute="trailing" id="VIX-8N-3Wu"/>
+                                                            <constraint firstAttribute="height" constant="120" id="dAr-aL-hw3"/>
+                                                            <constraint firstItem="QSU-a7-Azr" firstAttribute="leading" secondItem="gfh-P0-ABZ" secondAttribute="leading" id="jjF-HL-VP1"/>
+                                                            <constraint firstItem="QSU-a7-Azr" firstAttribute="top" secondItem="gfh-P0-ABZ" secondAttribute="top" id="wZt-Mp-JDG"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="nBS-8g-SwP"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-Jq-o1b" customClass="IconTextFieldView" customModule="EdhiTrust" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="200.5" width="342" height="40"/>
+                                                        <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="lFA-Ik-zus"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLN-kX-Tug" customClass="IconTextFieldView" customModule="EdhiTrust" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="270.5" width="342" height="40"/>
+                                                        <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="78Q-xt-QUD"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-JP-ICV">
+                                                        <rect key="frame" x="0.0" y="340.5" width="342" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="p55-yC-SBi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Continue">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="saveProfileClicked:" destination="DcD-7I-2FD" eventType="touchUpInside" id="NFY-oM-V4q"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="zmE-Jq-o1b" secondAttribute="trailing" id="76S-GC-X3n"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ahl-JP-ICV" secondAttribute="trailing" id="Lq8-qg-n9q"/>
+                                                    <constraint firstItem="NLN-kX-Tug" firstAttribute="leading" secondItem="2m8-BR-x9F" secondAttribute="leading" id="TlW-iU-eIX"/>
+                                                    <constraint firstItem="tpz-33-ztP" firstAttribute="leading" secondItem="2m8-BR-x9F" secondAttribute="leading" id="aiQ-xe-yH1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tpz-33-ztP" secondAttribute="trailing" id="jss-le-O26"/>
+                                                    <constraint firstItem="zmE-Jq-o1b" firstAttribute="leading" secondItem="2m8-BR-x9F" secondAttribute="leading" id="lqu-ui-yns"/>
+                                                    <constraint firstItem="ahl-JP-ICV" firstAttribute="leading" secondItem="2m8-BR-x9F" secondAttribute="leading" id="lzP-JR-HkZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NLN-kX-Tug" secondAttribute="trailing" id="sVk-NP-AFy"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2m8-BR-x9F" secondAttribute="trailing" id="POB-i8-mrU"/>
+                                            <constraint firstItem="2m8-BR-x9F" firstAttribute="leading" secondItem="hdK-gW-vA2" secondAttribute="leading" id="lHn-ww-Ye3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="hdK-gW-vA2" firstAttribute="leading" secondItem="CQT-bl-od2" secondAttribute="leading" constant="16" id="S9A-7b-YqI"/>
+                                    <constraint firstAttribute="height" constant="560" id="kHp-sJ-ZN3"/>
+                                    <constraint firstAttribute="trailing" secondItem="hdK-gW-vA2" secondAttribute="trailing" constant="16" id="l3v-dT-Ju7"/>
+                                    <constraint firstItem="hdK-gW-vA2" firstAttribute="centerY" secondItem="CQT-bl-od2" secondAttribute="centerY" id="t07-1X-DF1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3nY-QM-jWa" firstAttribute="top" secondItem="Cq6-6a-pxB" secondAttribute="top" id="0SH-68-V3S"/>
+                            <constraint firstItem="3nY-QM-jWa" firstAttribute="leading" secondItem="Cq6-6a-pxB" secondAttribute="leading" id="K49-hx-O3i"/>
+                            <constraint firstItem="CQT-bl-od2" firstAttribute="leading" secondItem="Cq6-6a-pxB" secondAttribute="leading" constant="20" id="LxP-fk-wic"/>
+                            <constraint firstItem="Cq6-6a-pxB" firstAttribute="trailing" secondItem="3nY-QM-jWa" secondAttribute="trailing" id="pKv-bA-FIc"/>
+                            <constraint firstItem="CQT-bl-od2" firstAttribute="centerY" secondItem="hSo-Uq-LlN" secondAttribute="centerY" id="un9-ds-ybL"/>
+                            <constraint firstItem="Cq6-6a-pxB" firstAttribute="trailing" secondItem="CQT-bl-od2" secondAttribute="trailing" constant="20" id="wvu-47-oSE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cq6-6a-pxB"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayNameView" destination="zmE-Jq-o1b" id="NTx-4l-txs"/>
+                        <outlet property="emailView" destination="NLN-kX-Tug" id="l6s-D1-aoB"/>
+                        <outlet property="profileImage" destination="QSU-a7-Azr" id="onG-z6-CAC"/>
+                        <outlet property="saveBtn" destination="ahl-JP-ICV" id="ugE-Y3-J8d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7i-OJ-Jy4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-486" y="104"/>
+        </scene>
         <!--Start Home View Controller-->
         <scene sceneID="aBU-MP-E86">
             <objects>
@@ -1403,12 +1542,14 @@
     <resources>
         <image name="amb" width="24" height="24"/>
         <image name="ambulance_icon" width="512" height="512"/>
+        <image name="avatar" width="320" height="320"/>
         <image name="bloodRe" width="30" height="30"/>
         <image name="femaleUnselected" width="47.5" height="47.5"/>
         <image name="maleSelected" width="47.5" height="47.5"/>
         <image name="miss" width="1280" height="1024"/>
         <image name="missing" width="30" height="30"/>
         <image name="missing person" width="86" height="86"/>
+        <image name="uploadIcon" width="62" height="62"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -134,9 +134,9 @@ class SheetConstraint{
 }
 extension UIButton {
     func stylePrimaryBtn() {
-        self.backgroundColor = UIColor(hexString: PRIMARY_COLOR)
-        self.roundBtn(corners: 5)
-        
+        self.addShadow()
+        self.backgroundColor = UIColor.black
+        self.layer.cornerRadius = 8
     }
     func styleSecondaryBtn() {
         self.backgroundColor = UIColor(hexString: LIGHT_GREY_COLOR)
@@ -193,6 +193,13 @@ extension UIImageView {
         self.layer.cornerRadius = radius
         self.clipsToBounds = true
     }
+   
+    func circular() {
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true
+    }
+    
+
 }
 extension UIViewController {
     

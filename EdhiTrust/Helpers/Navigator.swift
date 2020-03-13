@@ -12,6 +12,7 @@ enum Routes: String {
     case home = "StartHome"
     case missingsDonationsHome = "AllMissingsDonations"
     case signIn = "SignIn"
+    case editProfile = "EditProfile"
 }
 class Navigator {
     static func navigate(route to: Routes, from: UIViewController) {

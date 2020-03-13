@@ -28,6 +28,7 @@ class AuthPresenter {
             delegate.verificationCodeSent()
         }
     }
+    
     func confirmCode(verification: PhoneVerification) {
         guard let delegate = self.delegate else { return }
         
@@ -47,15 +48,28 @@ class AuthPresenter {
                 delegate.error(message: error.localizedDescription)
                 return
             }
-            delegate.phoneNumberConfirmed()
+            self.isProfileSet(uid: User.getUid())
         }
     }
+    
+    fileprivate func isProfileSet(uid: String) {
+        guard let delegate = self.delegate else { return }
+        FB_DB_REF.child("users/\(uid)").observeSingleEvent(of: .value) { (snapShot) in
+            if snapShot.exists() {
+                delegate.phoneNumberConfirmed()
+            }else{
+                delegate.profileNotSet()
+            }
+        }
+    }
+    
     fileprivate func isNumberValid(authModel: AuthModel) -> Bool {
         if authModel.phoneNumber.count < 1 {
             return false
         }
         return true
     }
+    
     fileprivate func isCodeValid(verification: PhoneVerification) -> Bool {
         if verification.code.count < 6 {
             return false

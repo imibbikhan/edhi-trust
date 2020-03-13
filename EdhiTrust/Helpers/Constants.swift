@@ -17,7 +17,7 @@ let BACKGROUND_GREY_COLOR = "FAFAFA"
 let BLOOD_COLOR_CODE = "ED9393"
 
 // MARK: - COLORS
-let EDHI_PRIMARY = UIColor(hexString: PRIMARY_COLOR)
+let EDHI_PRIMARY = UIColor.black
 let BLOOD_COLOR = UIColor(hexString: BLOOD_COLOR_CODE)
 
 // MARK: - Repeated

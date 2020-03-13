@@ -33,7 +33,7 @@ class DBHandler {
         }
         var requests = [BloodRequestModel]()
         query.observe(.value, with: { (snapShot) in
-//            print(snapShot)
+            //            print(snapShot)
             for case let request as DataSnapshot in snapShot.children {
                 print(request)
                 do {
@@ -53,13 +53,16 @@ class DBHandler {
         }
         
     }
-    
-}
-class User {
-    static func getUid()->String {
-        return Auth.auth().currentUser?.uid ?? ""
+    func editProfile(data: Any, success: @escaping (String?)->Void) {
+        let uid = User.getUid()
+        FB_DB_REF.child("users/\(uid)").setValue(data) {
+            (error, refer) in
+            if let err = error {
+                success(err.localizedDescription)
+            }else{
+                success(nil)
+            }
+        }
     }
-    static func getPhoneNumber()->String {
-        return Auth.auth().currentUser?.phoneNumber ?? ""
-    }
 }
+

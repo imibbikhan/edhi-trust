@@ -10,5 +10,6 @@ import Foundation
 protocol AuthDelegate {
     func verificationCodeSent()
     func phoneNumberConfirmed()
+    func profileNotSet()
     func error(message: String)
 }
