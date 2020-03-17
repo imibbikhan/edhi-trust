@@ -226,3 +226,13 @@ extension UIView {
         layer.mask = mask
     }
 }
+extension Date {
+    func readable()->String {
+        let formatter = DateFormatter()
+        formatter.dateFormat =  "E, d MMM yyyy HH:mm:ss Z"
+        let longFormattedStrng = formatter.string(from: self)
+        let newDate = formatter.date(from: longFormattedStrng)
+        formatter.dateFormat = "MMM d, yyyy"
+        return formatter.string(from: newDate!)
+    }
+}

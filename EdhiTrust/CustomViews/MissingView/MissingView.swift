@@ -10,6 +10,9 @@ import UIKit
 class MissingView: UIView {
     // MARK: - Interface Outlets
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var date: UILabel!
     @IBOutlet weak var callBtn: UIButton!
     // MARK: - Properties
     let XIB_NAME = "MissingView"

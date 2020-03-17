@@ -18,8 +18,9 @@ class PostBloodRequestPresenter {
             return
         }
         do {
+            let path = "blood_requests/\(request.requestKey)"
             let data = try FirebaseEncoder().encode(request)
-            DBHandler.shared.postBloodRequestDB(requestKey: request.requestKey, data: data) { (error) in
+            DBHandler.shared.postNow(path: path, data: data) { (error) in
                 guard let err = error else {
                     delegate.postSuccess()
                     return

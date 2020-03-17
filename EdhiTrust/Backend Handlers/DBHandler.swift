@@ -15,8 +15,8 @@ class DBHandler {
     func getAutoId()->String{
         return FB_DB_REF.childByAutoId().key ?? UUID().uuidString
     }
-    func postBloodRequestDB(requestKey: String, data: Any, success: @escaping (String?)->Void) {
-        FB_DB_REF.child("blood_requests/\(requestKey)").setValue(data) {
+    func postNow(path: String, data: Any, success: @escaping (String?)->Void) {
+        FB_DB_REF.child(path).setValue(data) {
             (error, refer) in
             if let error = error {
                 success(error.localizedDescription)
@@ -37,9 +37,34 @@ class DBHandler {
             requests.removeAll()
             for case let request as DataSnapshot in snapShot.children {
                 do {
-                    
                     let decodedRequest = try FirebaseDecoder().decode(BloodRequestModel.self, from: request.value!)
                     print(decodedRequest)
+                    requests.append(decodedRequest)
+                }catch{
+                    fetched(requests, error.localizedDescription)
+                }
+            }
+            
+            fetched(requests, nil)
+            
+        }) { (error) in
+            fetched(requests, error.localizedDescription)
+        }
+        
+    }
+    func getMissingRequests(all: Bool, fetched: @escaping ([MissingModel], String?)->Void) {
+        var query = FB_DB_REF.child("missing_requests").queryOrdered(byChild: "user_key").queryEqual(toValue: User.getUid())
+        
+        if !all {
+            query = FB_DB_REF.child("missing_requests")
+        }
+        
+        var requests = [MissingModel]()
+        query.observe(.value, with: { (snapShot) in
+            requests.removeAll()
+            for case let request as DataSnapshot in snapShot.children {
+                do {
+                    let decodedRequest = try FirebaseDecoder().decode(MissingModel.self, from: request.value!)
                     requests.append(decodedRequest)
                 }catch{
                     fetched(requests, error.localizedDescription)

@@ -97,14 +97,14 @@ extension PostBloodRequestViewController {
 // MARK: - PostBloodRequestDelegate
 extension PostBloodRequestViewController: PostBloodRequestDelegate {
     func postSuccess() {
-        HUD.hide()
-        self.navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+            HUD.hide()
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func error(message: String) {
         HUD.hide()
         PopUp.shared.show(view: self, message: message)
     }
-    
-    
 }

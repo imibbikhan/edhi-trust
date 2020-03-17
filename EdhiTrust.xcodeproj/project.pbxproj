@@ -49,8 +49,13 @@
 		EEC26E8823C3023600AC6C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC26E8623C3023600AC6C4B /* LaunchScreen.storyboard */; };
 		EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8659D240E5EB400D84AEC /* BloodView.swift */; };
 		EEC865A0240E5F4200D84AEC /* BloodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC8659F240E5F4200D84AEC /* BloodView.xib */; };
+		EED4C7F02420D25700A000C0 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4C7EF2420D25700A000C0 /* DatePicker.swift */; };
+		EED4C7F22420E97900A000C0 /* MissingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4C7F12420E97900A000C0 /* MissingPresenter.swift */; };
 		EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */; };
 		EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */; };
+		EEE95467241E84C3006C7F57 /* PostMissingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE95466241E84C3006C7F57 /* PostMissingPresenter.swift */; };
+		EEE9546A241E84D9006C7F57 /* MissingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE95469241E84D9006C7F57 /* MissingModel.swift */; };
+		EEE9546D241E84E8006C7F57 /* MissingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE9546C241E84E8006C7F57 /* MissingDelegate.swift */; };
 		EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A3A23C3655B0005E291 /* RoundShadowView.swift */; };
 		EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A3E23C36FA00005E291 /* StartHomeViewController.swift */; };
 		EEEB0A4323C37E660005E291 /* AmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A4223C37E660005E291 /* AmbulancesViewController.swift */; };
@@ -105,8 +110,13 @@
 		EEC26E8923C3023600AC6C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEC8659D240E5EB400D84AEC /* BloodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodView.swift; sourceTree = "<group>"; };
 		EEC8659F240E5F4200D84AEC /* BloodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodView.xib; sourceTree = "<group>"; };
+		EED4C7EF2420D25700A000C0 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		EED4C7F12420E97900A000C0 /* MissingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPresenter.swift; sourceTree = "<group>"; };
 		EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsCarbonViewController.swift; sourceTree = "<group>"; };
 		EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPersonCarbonViewController.swift; sourceTree = "<group>"; };
+		EEE95466241E84C3006C7F57 /* PostMissingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMissingPresenter.swift; sourceTree = "<group>"; };
+		EEE95469241E84D9006C7F57 /* MissingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingModel.swift; sourceTree = "<group>"; };
+		EEE9546C241E84E8006C7F57 /* MissingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingDelegate.swift; sourceTree = "<group>"; };
 		EEEB0A3A23C3655B0005E291 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		EEEB0A3E23C36FA00005E291 /* StartHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartHomeViewController.swift; sourceTree = "<group>"; };
 		EEEB0A4223C37E660005E291 /* AmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbulancesViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +338,7 @@
 				EE0301932411FE52004F873B /* FloatButton.swift */,
 				EE03019924120899004F873B /* Navigator.swift */,
 				EE5C48FF24125E8B00783D9B /* StringPicker.swift */,
+				EED4C7EF2420D25700A000C0 /* DatePicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -416,6 +427,9 @@
 		EED5D4B623C39DD200F516A0 /* Missing Person */ = {
 			isa = PBXGroup;
 			children = (
+				EEE9546B241E84DD006C7F57 /* Delegate */,
+				EEE95468241E84CD006C7F57 /* Model */,
+				EEE95465241E849E006C7F57 /* Presenter */,
 				EED5D4B723C39DDA00F516A0 /* ViewController */,
 			);
 			path = "Missing Person";
@@ -429,6 +443,31 @@
 				EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EEE95465241E849E006C7F57 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EEE95466241E84C3006C7F57 /* PostMissingPresenter.swift */,
+				EED4C7F12420E97900A000C0 /* MissingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EEE95468241E84CD006C7F57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEE95469241E84D9006C7F57 /* MissingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEE9546B241E84DD006C7F57 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EEE9546C241E84E8006C7F57 /* MissingDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		EEEB0A3C23C36F880005E291 /* Start Home */ = {
@@ -611,6 +650,7 @@
 				EE03019A24120899004F873B /* Navigator.swift in Sources */,
 				EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */,
 				EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */,
+				EEE9546A241E84D9006C7F57 /* MissingModel.swift in Sources */,
 				EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */,
 				EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */,
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
@@ -618,6 +658,7 @@
 				EE4453F7241B2A2800AD0F80 /* STHandler.swift in Sources */,
 				EE445404241B320300AD0F80 /* DBHandler.swift in Sources */,
 				EE4453F5241B1F5B00AD0F80 /* EditProfileViewController.swift in Sources */,
+				EED4C7F22420E97900A000C0 /* MissingPresenter.swift in Sources */,
 				EE4453F9241B2A9100AD0F80 /* User.swift in Sources */,
 				EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */,
 				EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */,
@@ -628,13 +669,16 @@
 				EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */,
 				EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */,
 				EE5C49062412633200783D9B /* BloodRequestModel.swift in Sources */,
+				EED4C7F02420D25700A000C0 /* DatePicker.swift in Sources */,
 				EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */,
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
 				EE03018B2411FB4D004F873B /* AuthPresenter.swift in Sources */,
 				EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */,
 				EE7956AC241B87740056118E /* ViewBloodRequestViewController.swift in Sources */,
+				EEE95467241E84C3006C7F57 /* PostMissingPresenter.swift in Sources */,
 				EE4453FC241B2B0B00AD0F80 /* ProfileModel.swift in Sources */,
 				EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */,
+				EEE9546D241E84E8006C7F57 /* MissingDelegate.swift in Sources */,
 				EE445402241B2BF200AD0F80 /* EditProfileDelegate.swift in Sources */,
 				EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */,
 				EE5C49092412634700783D9B /* BloodRequestDelegate.swift in Sources */,
@@ -787,7 +831,8 @@
 			baseConfigurationReference = 3A1194EF4F65149B679A006D /* Pods-EdhiTrust.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EdhiTrust/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -796,6 +841,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edhi-trust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -806,7 +852,8 @@
 			baseConfigurationReference = A4E619D75221AE2C9BA17BCC /* Pods-EdhiTrust.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EdhiTrust/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -815,6 +862,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edhi-trust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

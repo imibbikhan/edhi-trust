@@ -11,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MissingView" customModule="EdhiTrust" customModuleProvider="target">
             <connections>
                 <outlet property="callBtn" destination="Llh-5j-W4D" id="lD7-Xh-gan"/>
+                <outlet property="date" destination="Dcu-ce-pNG" id="WZb-fP-jHa"/>
+                <outlet property="name" destination="Blf-8N-TFS" id="WyL-T9-qYI"/>
+                <outlet property="status" destination="c7g-WQ-tiU" id="BrH-7N-u5f"/>
                 <outlet property="userImage" destination="2fC-GN-pV2" id="gqL-5k-KFX"/>
             </connections>
         </placeholder>

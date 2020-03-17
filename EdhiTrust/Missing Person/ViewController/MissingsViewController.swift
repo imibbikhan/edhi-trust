@@ -7,17 +7,32 @@
 //
 
 import UIKit
-
+import PKHUD
 class MissingsViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Properties
+    var presenter: MissingPresenter!
+    var missings: [MissingModel]!
     // MARK: - ViewControllers life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        missings = [MissingModel]()
+        
         setupUI()
         setupTableView()
         
+        
+        presenter = MissingPresenter()
+        presenter.delegate = self
+        
+        HUD.show(.progress)
+        if let _ = self.tabBarController {
+            presenter.getAllMissings(all: true)
+        }else{
+            presenter.getAllMissings(all: false)
+        }
     }
     
     
@@ -52,15 +67,43 @@ extension MissingsViewController: UITableViewDelegate, UITableViewDataSource {
         return 160
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return missings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "missingCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "missingCell") as? MissingCell
+        let viewM = cell?.missingView
+        let missing = self.missings[indexPath.row]
+        
+        viewM?.name.text = missing.missingName
+        viewM?.status.text = missing.missingStatus
+        viewM?.date.text = missing.disappearedDate
+        viewM?.userImage.sd_setImage(with: URL(string: missing.imageURL))
+        
         return cell!
+    }
+}
+// MARK: - MissingDelegate
+extension MissingsViewController: MissingDelegate {
+    func missingsFetched(missings: [MissingModel]) {
+        DispatchQueue.main.async {
+            HUD.hide()
+            self.missings = missings
+            self.tableView.reloadData()
+        }
+    }
+    
+    func error(message: String) {
+        DispatchQueue.main.async {
+            HUD.hide()
+            PopUp.shared.show(view: self, message: message)
+        }
     }
     
     
 }
-
+// MARK: - Missing Cell
+class MissingCell: UITableViewCell {
+    @IBOutlet weak var missingView: MissingView!
+}
 
