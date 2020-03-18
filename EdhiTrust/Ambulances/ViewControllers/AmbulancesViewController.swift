@@ -8,18 +8,24 @@
 
 import UIKit
 import GoogleMaps
+import CodableFirebase
 class AmbulancesViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var mapView: GMSMapView!
     
     // MARK: - Properties
     var locationManager = CLLocationManager()
-    
+    var presenter: AmbulancesPresenter!
+    var ambulances: [AmbulanceModel]!
     // MARK: - ViewControllers life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        ambulances = [AmbulanceModel]()
         setupUI()
         setupLocationManager()
+        
+        presenter = AmbulancesPresenter()
+        presenter.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
         guard let tab = self.tabBarController else { return }
@@ -46,7 +52,7 @@ extension AmbulancesViewController {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = 2
+            locationManager.distanceFilter = 3
             locationManager.requestAlwaysAuthorization()
             self.checkStatus()
         }else{
@@ -63,12 +69,26 @@ extension AmbulancesViewController {
             break
         }
     }
-    fileprivate func addMarkers(coordinates: CLLocationCoordinate2D) {
+    fileprivate func addMarkers() {
         DispatchQueue.main.async {
             self.mapView.clear()
-            let marker = GMSMarker(position: coordinates)
-            marker.icon = GMSMarker.markerImage(with: UIColor(hexString: PRIMARY_COLOR))
-            marker.map = self.mapView
+            for amb in self.ambulances {
+                let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: amb.location.lati, longitude: amb.location.longi))
+//                marker.icon = GMSMarker.markerImage(with: UIColor(hexString: PRIMARY_COLOR))
+                let markerImage = UIImage(named: "ambulance-1")!.withRenderingMode(.alwaysOriginal)
+                
+                //creating a marker view
+                let markerView = UIImageView(image: markerImage)
+                marker.iconView = markerView
+                
+                do {
+                    print(amb)
+                    marker.userData = try FirebaseEncoder().encode(amb)
+                }catch{
+                    print(error.localizedDescription)
+                }
+                marker.map = self.mapView
+            }
         }
     }
     fileprivate func styleMap() {
@@ -90,12 +110,12 @@ extension AmbulancesViewController: CLLocationManagerDelegate, GMSMapViewDelegat
         if let location = locations.last {
             let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                                   longitude: location.coordinate.longitude,
-                                                  zoom: 15.0)
+                                                  zoom: 12.0)
             mapView.camera = camera
             mapView.delegate = self
             mapView.isMyLocationEnabled = true
             mapView.settings.myLocationButton = true
-            self.addMarkers(coordinates: location.coordinate)
+            presenter.getAmbulances(myLocation: location)
         }
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -126,9 +146,23 @@ extension AmbulancesViewController: CLLocationManagerDelegate, GMSMapViewDelegat
         }
     }
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        let amb = STORYBOARD.instantiateViewController(withIdentifier: "AmbulanceView")
-//        amb.modalPresentationStyle = .fullScreen
-        self.present(amb, animated: true)
+        let amb = STORYBOARD.instantiateViewController(withIdentifier: "AmbulanceView") as? AmbulanceViewViewController
+        amb?.ambulance = marker.userData
+        self.present(amb ?? UIViewController(), animated: true)
         return true
     }
+}
+// MARK: - Ambulances Delegate
+extension AmbulancesViewController: AmbulancesDelegate {
+    func ambulancesFetched(ambulances: [AmbulanceModel]) {
+        print(ambulances)
+        self.ambulances = ambulances
+        self.addMarkers()
+    }
+    
+    func error(message: String) {
+        PopUp.shared.show(view: self, message: message)
+    }
+    
+    
 }

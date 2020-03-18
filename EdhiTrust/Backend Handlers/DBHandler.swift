@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import CodableFirebase
+import CoreLocation
 class DBHandler {
     static var shared = DBHandler()
     
@@ -75,6 +76,29 @@ class DBHandler {
             
         }) { (error) in
             fetched(requests, error.localizedDescription)
+        }
+        
+    }
+    func getAmbulances(city: String, myLocation: CLLocation ,fetched: @escaping ([AmbulanceModel], String?)->Void) {
+        let query = FB_DB_REF.child("ambulances").queryOrdered(byChild: "city").queryEqual(toValue: city)
+        var ambulances = [AmbulanceModel]()
+        query.observe(.value, with: { (snapShot) in
+            ambulances.removeAll()
+            for case let request as DataSnapshot in snapShot.children {
+                do {
+                    var amb = try FirebaseDecoder().decode(AmbulanceModel.self, from: request.value!)
+                    let distance = Locations.getDistance(destination: CLLocationCoordinate2D(latitude: amb.location.lati, longitude: amb.location.longi), myLocation: myLocation)
+                    amb.onDistance = distance
+                    ambulances.append(amb)
+                }catch{
+                    fetched(ambulances, error.localizedDescription)
+                }
+            }
+            
+            fetched(ambulances, nil)
+            
+        }) { (error) in
+            fetched(ambulances, error.localizedDescription)
         }
         
     }

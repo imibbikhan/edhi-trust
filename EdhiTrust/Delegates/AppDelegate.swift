@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        GMSServices.provideAPIKey(GOOGLE_MAP_KEY)
-        GMSPlacesClient.provideAPIKey(GOOGLE_MAP_KEY)
+        GMSServices.provideAPIKey("AIzaSyBzMuHUjLd1vJdtwbVO5-1ePPAO_ggsHfU")
+//        GMSPlacesClient.provideAPIKey("")
         IQKeyboardManager.shared.enable = true
         checkLogin()
         return true
