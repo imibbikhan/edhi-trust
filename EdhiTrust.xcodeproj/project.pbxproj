@@ -39,6 +39,7 @@
 		EE6D7A8324129583001D71BD /* BloodRequestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D7A8224129583001D71BD /* BloodRequestsPresenter.swift */; };
 		EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */; };
 		EE7956AC241B87740056118E /* ViewBloodRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */; };
+		EE7CB5DD2421B6CD0051BCA8 /* MissingViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CB5DC2421B6CD0051BCA8 /* MissingViewViewController.swift */; };
 		EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0723C309D200BFC0EB /* Constants.swift */; };
 		EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0923C30A1800BFC0EB /* Extension.swift */; };
 		EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC0D4CB23C8ABB400829B30 /* MissingView.swift */; };
@@ -98,6 +99,7 @@
 		EE6D7A8224129583001D71BD /* BloodRequestsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsPresenter.swift; sourceTree = "<group>"; };
 		EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmbulancesViewController.swift; sourceTree = "<group>"; };
 		EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBloodRequestViewController.swift; sourceTree = "<group>"; };
+		EE7CB5DC2421B6CD0051BCA8 /* MissingViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingViewViewController.swift; sourceTree = "<group>"; };
 		EE95DD0723C309D200BFC0EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE95DD0923C30A1800BFC0EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EEC0D4CB23C8ABB400829B30 /* MissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingView.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */,
 				EE404B7923C8B34000884272 /* MissingsViewController.swift */,
 				EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */,
+				EE7CB5DC2421B6CD0051BCA8 /* MissingViewViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */,
 				EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */,
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
+				EE7CB5DD2421B6CD0051BCA8 /* MissingViewViewController.swift in Sources */,
 				EE03019624120092004F873B /* SignInViewController.swift in Sources */,
 				EE4453F7241B2A2800AD0F80 /* STHandler.swift in Sources */,
 				EE445404241B320300AD0F80 /* DBHandler.swift in Sources */,

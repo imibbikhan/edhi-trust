@@ -35,10 +35,7 @@ class MissingView: UIView {
         setupUI()
     }
     func setupUI() {
-        callBtn.layer.borderWidth = 0.2
-        callBtn.layer.borderColor = UIColor.lightGray.cgColor
+//        callBtn.setupLightBtn()
 //        callBtn.addShadow()
-//        callBtn.corners(radius: 8)
-//        userImage.corners(radius: 8)
     }
 }

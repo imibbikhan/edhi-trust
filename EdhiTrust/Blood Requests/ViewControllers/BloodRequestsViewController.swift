@@ -14,12 +14,12 @@ class BloodRequestsViewController: UIViewController {
     
     // MARK: - Properties
     var presenter: BloodRequestsPresenter!
-    var allMyRequests: [BloodRequestModel]!
+    var requests: [BloodRequestModel]!
     
     // MARK: - ViewControllers life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        allMyRequests = [BloodRequestModel]()
+        requests = [BloodRequestModel]()
         setupUI()
         setupTableView()
         
@@ -33,7 +33,10 @@ class BloodRequestsViewController: UIViewController {
         }
         presenter.getMyRequests(allRequests: false)
     }
-    
+    // MARK: - Objc Methods
+    @objc func callNow(sender: UIButton) {
+        self.requests[sender.tag].phoneNumber.makeACall()
+    }
     
 }
 // MARK: - Private Methods
@@ -63,23 +66,27 @@ extension BloodRequestsViewController {
 // MARK: - TableView Delegate And DataSource
 extension BloodRequestsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Navigator.toViewBloodRequest(request: allMyRequests[indexPath.row], from: self)
+        Navigator.toViewBloodRequest(request: requests[indexPath.row], from: self)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.allMyRequests.count
+        return self.requests.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell") as? RequestCell
         let bloodView = cell?.bloodView
-        let request = allMyRequests[indexPath.row]
+        let request = requests[indexPath.row]
         
         bloodView?.bloodTitle.text = request.bloodGroup
         bloodView?.location.text = request.referCity
         bloodView?.bloodFor.text = request.bloodFor
+        
+        bloodView?.callBtn.tag = indexPath.row
+        bloodView?.callBtn.addTarget(self, action: #selector(callNow(sender:)), for: .touchUpInside)
+        
         return cell!
     }
     
@@ -90,7 +97,7 @@ extension BloodRequestsViewController: BloodRequestsDelegate {
     func requestsFetched(requests: [BloodRequestModel]) {
         DispatchQueue.main.async {
             HUD.hide()
-            self.allMyRequests = requests
+            self.requests = requests
             self.tableView.reloadData()
         }
     }

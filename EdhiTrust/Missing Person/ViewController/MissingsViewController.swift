@@ -35,7 +35,10 @@ class MissingsViewController: UIViewController {
         }
     }
     
-    
+    // MARK: - Objc Methods
+    @objc func callNow(sender: UIButton) {
+        self.missings[sender.tag].phoneNumber.makeACall()
+    }
 }
 // MARK: - Private Methods
 extension MissingsViewController {
@@ -63,6 +66,9 @@ extension MissingsViewController {
 }
 // MARK: - TableView Delegate And DataSource
 extension MissingsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Navigator.toViewMissingRequest(missing: missings[indexPath.row], from: self)
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
@@ -80,6 +86,8 @@ extension MissingsViewController: UITableViewDelegate, UITableViewDataSource {
         viewM?.date.text = missing.disappearedDate
         viewM?.userImage.sd_setImage(with: URL(string: missing.imageURL))
         
+        viewM?.callBtn.tag = indexPath.row
+        viewM?.callBtn.addTarget(self, action: #selector(callNow(sender:)), for: .touchUpInside)
         return cell!
     }
 }
@@ -99,8 +107,6 @@ extension MissingsViewController: MissingDelegate {
             PopUp.shared.show(view: self, message: message)
         }
     }
-    
-    
 }
 // MARK: - Missing Cell
 class MissingCell: UITableViewCell {

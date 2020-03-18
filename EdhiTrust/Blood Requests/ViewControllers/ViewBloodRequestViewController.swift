@@ -32,7 +32,9 @@ class ViewBloodRequestViewController: UIViewController {
     }
     // MARK: - Interface Actions
     @IBAction func callBtnClicked(_ sender: UIButton) {
-        
+        if let request = self.bloodRequest {
+            request.phoneNumber.makeACall()
+        }
     }
 }
 // MARK: - Properties
@@ -40,7 +42,6 @@ extension ViewBloodRequestViewController {
     fileprivate func setupUI() {
         self.navigationItem.title = "Request Details"
         backView.backgroundColor = BLOOD_COLOR
-        callBtn.setupLightBtn()
         
         if let request = bloodRequest {
             self.updateUI(request: request)
