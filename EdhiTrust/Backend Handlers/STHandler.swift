@@ -19,7 +19,7 @@ class STHandler {
             completion("", "Image Data error")
             return
         }
-        let imageToUpload = FB_ST_REF.child("profile_images/")
+        let imageToUpload = FB_ST_REF.child(path)
         imageToUpload.putData(imageDataa, metadata: nil) { (data, error) in
             if let error = error {
                 completion("", error.localizedDescription)
