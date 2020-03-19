@@ -35,7 +35,7 @@ class MissingView: UIView {
         setupUI()
     }
     func setupUI() {
-//        callBtn.setupLightBtn()
+        callBtn.setupLightBtn()
 //        callBtn.addShadow()
     }
 }

@@ -14,7 +14,7 @@ class AmbulanceViewViewController: UIViewController {
     @IBOutlet weak var isAvailable: UILabel!
     @IBOutlet weak var onDistance: UILabel!
     @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var notifyBtn: UIView!
+    @IBOutlet weak var notifyBtn: UIButton!
     @IBOutlet weak var callNowBtn: UIView!
     
     // MARK: - Properties
@@ -43,8 +43,7 @@ extension AmbulanceViewViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissNow))
         self.view.addGestureRecognizer(gesture)
         
-        notifyBtn.layer.borderWidth = 0.2
-        notifyBtn.layer.borderColor = UIColor.lightGray.cgColor
+        notifyBtn.setupLightBtn()
         
         if let amb = self.ambulance {
             do {

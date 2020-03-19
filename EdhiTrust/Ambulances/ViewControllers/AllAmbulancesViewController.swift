@@ -12,6 +12,8 @@ class AllAmbulancesViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    var ambulances: [AmbulanceModel]!
+    
     // MARK: - ViewControllers life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +21,17 @@ class AllAmbulancesViewController: UIViewController {
         setupTableView()
         
     }
-    
+    // MARK: - Objc Methods
+    @objc func callNow(_ sender: UIButton) {
+        guard let ambulances = self.ambulances else { return  }
+        ambulances[sender.tag].phoneNumber.makeACall()
+    }
     
 }
 // MARK: - Private Methods
 extension AllAmbulancesViewController {
     fileprivate func setupUI() {
-        
+        self.navigationItem.title = "Ambulances"
     }
     fileprivate func setupTableView() {
         tableView.delegate = self
@@ -35,16 +41,33 @@ extension AllAmbulancesViewController {
 }
 // MARK: - TableView Delegate And DataSource
 extension AllAmbulancesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        guard let ambulances = self.ambulances else { return 0 }
+        return ambulances.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ambulanceCell") as? AmbulanceCell
+        let amb = ambulances[indexPath.row]
+        cell?.driverName.text = amb.driverName
+        let distance = amb.onDistance ?? 0.0
+        cell?.distance.text = "\(Locations.distanceString(distance: distance)) KM Away"
+        cell?.availability.text = amb.isAvailable ? "Available" : "Not Availabe"
+        cell?.callBtn.tag = indexPath.row
+        cell?.callBtn.addTarget(self, action: #selector(callNow(_:)), for: .touchUpInside)
+        
         return cell!
     }
     
     
 }
-
-
+// MARK: - AmbulanceCell
+class AmbulanceCell: UITableViewCell {
+    @IBOutlet weak var driverName: UILabel!
+    @IBOutlet weak var distance: UILabel!
+    @IBOutlet weak var availability: UILabel!
+    @IBOutlet weak var callBtn: UIButton!
+}

@@ -163,7 +163,7 @@ extension UIButton {
         self.layer.borderWidth = 1.0
     }
     func setupLightBtn() {
-        self.layer.borderWidth = 0.2
+        self.layer.borderWidth = 0.5
         self.layer.borderColor = UIColor.lightGray.cgColor
     }
 }

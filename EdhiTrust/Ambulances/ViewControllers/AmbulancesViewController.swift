@@ -35,8 +35,7 @@ class AmbulancesViewController: UIViewController {
 
     // MARK: - Objc Methods
     @objc func showAll() {
-        let vc = STORYBOARD.instantiateViewController(withIdentifier: "AllAmbulances")
-        self.navigationController?.pushViewController(vc, animated: true)
+        Navigator.toViewAmbulances(ambulances: self.ambulances, from: self)
     }
 }
 // MARK: - Private Methods
@@ -82,7 +81,6 @@ extension AmbulancesViewController {
                 marker.iconView = markerView
                 
                 do {
-                    print(amb)
                     marker.userData = try FirebaseEncoder().encode(amb)
                 }catch{
                     print(error.localizedDescription)

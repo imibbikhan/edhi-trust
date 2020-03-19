@@ -30,4 +30,7 @@ class Locations {
             address(addressText)
         })
     }
+    static func distanceString(distance: Double) -> String {
+        return String(format: "%.2f", distance/1000)
+    }
 }

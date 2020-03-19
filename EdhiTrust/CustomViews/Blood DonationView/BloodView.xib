@@ -76,13 +76,13 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B3-lD-yvK">
-                    <rect key="frame" x="190" y="100" width="164" height="35"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="150" y="100" width="244" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="klo-L9-9yl"/>
                     </constraints>
                     <state key="normal" title="Call">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9W-3P-x8f">
@@ -107,19 +107,19 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="BL4-iX-7bS" firstAttribute="leading" secondItem="gwY-yg-vzH" secondAttribute="trailing" constant="20" id="07N-IO-gBg"/>
-                <constraint firstItem="6zI-Pl-Wcw" firstAttribute="trailing" secondItem="7B3-lD-yvK" secondAttribute="trailing" constant="60" id="0pO-Av-Of9"/>
+                <constraint firstItem="6zI-Pl-Wcw" firstAttribute="trailing" secondItem="7B3-lD-yvK" secondAttribute="trailing" constant="20" id="0pO-Av-Of9"/>
                 <constraint firstItem="6zI-Pl-Wcw" firstAttribute="trailing" secondItem="BL4-iX-7bS" secondAttribute="trailing" id="GVb-q6-DR8"/>
                 <constraint firstItem="gwY-yg-vzH" firstAttribute="leading" secondItem="e9W-3P-x8f" secondAttribute="trailing" constant="20" id="KBQ-Vp-lpd"/>
                 <constraint firstItem="e9W-3P-x8f" firstAttribute="centerY" secondItem="PG2-QP-1AP" secondAttribute="centerY" id="MUe-zV-ugp"/>
                 <constraint firstItem="gwY-yg-vzH" firstAttribute="top" secondItem="PG2-QP-1AP" secondAttribute="top" constant="5" id="SJE-We-zwd"/>
                 <constraint firstItem="e9W-3P-x8f" firstAttribute="leading" secondItem="PG2-QP-1AP" secondAttribute="leading" id="T61-oV-nbt"/>
-                <constraint firstItem="7B3-lD-yvK" firstAttribute="leading" secondItem="e9W-3P-x8f" secondAttribute="trailing" constant="60" id="bcE-24-wQO"/>
+                <constraint firstItem="7B3-lD-yvK" firstAttribute="leading" secondItem="e9W-3P-x8f" secondAttribute="trailing" constant="20" id="bcE-24-wQO"/>
                 <constraint firstItem="7B3-lD-yvK" firstAttribute="top" secondItem="BL4-iX-7bS" secondAttribute="bottom" constant="14" id="cwY-wH-9c5"/>
                 <constraint firstItem="BL4-iX-7bS" firstAttribute="top" secondItem="PG2-QP-1AP" secondAttribute="top" constant="5" id="ye8-07-VWg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="6zI-Pl-Wcw"/>
-            <point key="canvasLocation" x="8.6956521739130448" y="-128.57142857142856"/>
+            <point key="canvasLocation" x="70" y="-129"/>
         </view>
     </objects>
 </document>
