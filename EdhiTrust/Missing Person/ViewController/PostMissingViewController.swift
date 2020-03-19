@@ -37,7 +37,6 @@ class PostMissingViewController: UIViewController {
 // MARK: - Private Methods
 extension PostMissingViewController {
     fileprivate func setupUI() {
-        
         self.navigationItem.title = "Post Missing"
         fromLocation.icon.image = UIImage(named: "pin2")
         dissappearedLocation.icon.image = UIImage(named: "pin2")
@@ -49,7 +48,20 @@ extension PostMissingViewController {
         postMissingBtn.stylePrimaryBtn()
         missingImageView.circular()
         missingDate.field.delegate = self
-        
+        if let missing = missingModel {
+            self.updateUI(missing: missing)
+        }
+    }
+    fileprivate func updateUI(missing: MissingModel) {
+        missingName.field.text = missing.missingName
+        missingAge.field.text = missing.age
+        fromLocation.field.text = missing.city
+        dissappearedLocation.field.text = missing.dissappearedCity
+        missingDate.field.text = missing.disappearedDate
+        missingType.setTitle(missing.missingStatus, for: .normal)
+        gender.setTitle(missing.gender, for: .normal)
+        fullAddress.field.text = missing.address
+        missingImageView.sd_setImage(with: URL(string: missing.imageURL))
     }
     fileprivate func createMissingModel(url: String)->MissingModel {
         var key = DBHandler.shared.getAutoId()

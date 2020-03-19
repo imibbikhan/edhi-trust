@@ -23,6 +23,30 @@ class PopUp {
         popup.addButtons([cancel])
         view.present(popup, animated: true, completion: nil)
     }
+    func showOptions(view: UIViewController, done: @escaping (Bool) -> Void) {
+        let popup = PopupDialog(title: "Choose", message: "")
+        let buttonOne = DefaultButton(title: "Edit".uppercased(), height: 40, dismissOnTap: false) {
+            popup.dismiss {
+                done(false)
+            }
+        }
+        
+        let buttonTwo = DefaultButton(title: "Delete".uppercased(), height: 40, dismissOnTap: false) {
+            popup.dismiss {
+                done(true)
+            }
+        }
+        
+        let buttonThree = DefaultButton(title: "Cancel".uppercased(), height: 40, dismissOnTap: true) {
+            
+        }
+        buttonOne.titleColor = UIColor.systemBlue
+        buttonTwo.titleColor = UIColor.systemRed
+        buttonThree.titleColor = UIColor.systemGray
+        
+        popup.addButtons([buttonOne, buttonTwo, buttonThree])
+        view.present(popup, animated: true, completion: nil)
+    }
 }
 
 

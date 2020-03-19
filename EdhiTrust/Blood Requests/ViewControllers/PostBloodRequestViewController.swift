@@ -92,6 +92,18 @@ extension PostBloodRequestViewController {
         
         fullAddress.icon.image = UIImage(named: "pin2")
         fullAddress.field.placeholder = "Bannu Road Haji Abad, Jarma, Kohat"
+        if let request = bloodRequestModel {
+            self.updateUI(request: request)
+        }
+    }
+    fileprivate func updateUI(request: BloodRequestModel) {
+        bloodFor.field.text = request.bloodFor
+        cityRefer.field.text = request.referCity
+        fullAddress.field.text = request.fullAddress
+        age.field.text = request.age
+        gender.setTitle(request.gender, for: .normal)
+        requestType.setTitle(request.requestType, for: .normal)
+        bloodGroup.setTitle(request.bloodGroup, for: .normal)
     }
 }
 // MARK: - PostBloodRequestDelegate

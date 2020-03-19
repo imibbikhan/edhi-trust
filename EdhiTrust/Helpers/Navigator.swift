@@ -16,6 +16,8 @@ enum Routes: String {
     case viewBloodRequest = "ViewBloodRequest"
     case viewMissingRequest = "VewMissingRequest"
     case viewAllAmbulances = "AllAmbulances"
+    case postBloodRequest = "PostBloodRequest"
+    case postMissings = "PostMissings"
 }
 class Navigator {
     static func navigate(route to: Routes, from: UIViewController) {
@@ -40,6 +42,16 @@ class Navigator {
     static func toViewAmbulances(ambulances: [AmbulanceModel], from: UIViewController) {
         let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.viewAllAmbulances.rawValue) as? AllAmbulancesViewController
         vc?.ambulances = ambulances
+        from.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    static func toEditBloodRequest(request: BloodRequestModel, from: UIViewController) {
+        let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.postBloodRequest.rawValue) as? PostBloodRequestViewController
+        vc?.bloodRequestModel = request
+        from.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    static func toEditMissing(missing: MissingModel, from: UIViewController) {
+        let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.postMissings.rawValue) as? PostMissingViewController
+        vc?.missingModel = missing
         from.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 }

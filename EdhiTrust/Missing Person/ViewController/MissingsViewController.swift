@@ -39,6 +39,21 @@ class MissingsViewController: UIViewController {
     @objc func callNow(sender: UIButton) {
         self.missings[sender.tag].phoneNumber.makeACall()
     }
+    @objc func handleLongPress(gesture: UIGestureRecognizer){
+        let point = gesture.location(in: tableView)
+        let index = tableView.indexPathForRow(at: point)
+        guard let indexValue = index else { return }
+        if gesture.state == .ended {
+            PopUp.shared.showOptions(view: self) { (action) in
+                if action {
+                    print("true")
+                }else{
+                    Navigator.toEditMissing(missing: self.missings[indexValue.row], from: self)
+                }
+            }
+
+        }
+    }
 }
 // MARK: - Private Methods
 extension MissingsViewController {
@@ -62,6 +77,13 @@ extension MissingsViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: .zero)
+    }
+    fileprivate func addGesture(cell: UITableViewCell) {
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gesture:)))
+        cell.isUserInteractionEnabled = true
+        gesture.minimumPressDuration = 1.2
+        gesture.delaysTouchesEnded = true
+        cell.addGestureRecognizer(gesture)
     }
 }
 // MARK: - TableView Delegate And DataSource
@@ -88,6 +110,10 @@ extension MissingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         viewM?.callBtn.tag = indexPath.row
         viewM?.callBtn.addTarget(self, action: #selector(callNow(sender:)), for: .touchUpInside)
+        
+        if self.tabBarController == nil {
+            addGesture(cell: cell!)
+        }
         return cell!
     }
 }
