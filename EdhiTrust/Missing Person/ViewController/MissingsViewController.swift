@@ -43,7 +43,7 @@ class MissingsViewController: UIViewController {
 // MARK: - Private Methods
 extension MissingsViewController {
     fileprivate func setupUI() {
-        self.navigationItem.title = "Missings"
+        self.navigationItem.title = "Your Missings"
         
         // If there is bottom Nav it will give -90 padding from bottom.
         var btnBottom: CGFloat = -50

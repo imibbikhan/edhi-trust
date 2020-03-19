@@ -10,9 +10,9 @@ import Foundation
 class MissingPresenter {
     var delegate: MissingDelegate?
     
-    func getAllMissings(all: Bool) {
+    func getAllMissings(all: Bool, myCity: Bool = false) {
         guard let delegate = self.delegate else { return }
-        DBHandler.shared.getMissingRequests(all: all) { (missings, error) in
+        DBHandler.shared.getMissingRequests(all: all, myCity: myCity) { (missings, error) in
             if let err = error {
                 delegate.error(message: err)
                 return

@@ -51,6 +51,7 @@ extension MissingViewViewController {
         fullAddress.text = missing.address
         status.text = missing.missingStatus
         age.text = missing.age
+        gender.text = missing.gender
         missingFrom.text = missing.dissappearedCity
         missingDate.text = missing.disappearedDate
         missingImageView.sd_setImage(with: URL(string: missing.imageURL))

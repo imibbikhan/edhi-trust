@@ -28,10 +28,10 @@ class BloodRequestsViewController: UIViewController {
         presenter.delegate = self
         HUD.show(.progress)
         if let _ = tabBarController {
-            presenter.getMyRequests(allRequests: true)
+            presenter.getBloodRequests(all: true)
             return
         }
-        presenter.getMyRequests(allRequests: false)
+        presenter.getBloodRequests(all: false)
     }
     // MARK: - Objc Methods
     @objc func callNow(sender: UIButton) {
@@ -42,7 +42,7 @@ class BloodRequestsViewController: UIViewController {
 // MARK: - Private Methods
 extension BloodRequestsViewController {
     fileprivate func setupUI() {
-        self.navigationItem.title = "Blood Requests"
+        self.navigationItem.title = "Your Requests"
         
         // If there is bottom Nav it will give -90 padding from bottom.
         var btnBottom: CGFloat = -50

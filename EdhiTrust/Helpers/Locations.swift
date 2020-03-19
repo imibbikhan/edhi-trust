@@ -20,8 +20,8 @@ class Locations {
             var addressText = ""
             if error != nil {
                 addressText = "Erro occure while getting address."
-            }else if let name = placemarks?.first?.name {
-                let addressInText = "\(name)" // , \(country) , \(city)
+            }else if let city = placemarks?.first?.locality {
+                let addressInText = "\(city)" // , \(country) , \(city)
                 addressText = addressInText
             }
             else {

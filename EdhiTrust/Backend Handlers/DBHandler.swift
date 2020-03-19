@@ -26,11 +26,16 @@ class DBHandler {
             }
         }
     }
-    func getBloodRequestsDB(allRequests: Bool, fetched: @escaping ([BloodRequestModel], String?)->Void) {
+    func getBloodRequestsDB(allRequests: Bool, myCity: Bool, fetched: @escaping ([BloodRequestModel], String?)->Void) {
         var query = FB_DB_REF.child("blood_requests").queryOrdered(byChild: "user_key").queryEqual(toValue: User.getUid())
         
-        if !allRequests {
+        if allRequests {
             query = FB_DB_REF.child("blood_requests")
+        }
+        
+        if myCity {
+            let city = DEFAULTS.string(forKey: "CurrentCity") ?? ""
+            query = FB_DB_REF.child("blood_requests").queryOrdered(byChild: "refer_city").queryEqual(toValue: city)
         }
         
         var requests = [BloodRequestModel]()
@@ -53,11 +58,16 @@ class DBHandler {
         }
         
     }
-    func getMissingRequests(all: Bool, fetched: @escaping ([MissingModel], String?)->Void) {
+    func getMissingRequests(all: Bool, myCity: Bool, fetched: @escaping ([MissingModel], String?)->Void) {
         var query = FB_DB_REF.child("missing_requests").queryOrdered(byChild: "user_key").queryEqual(toValue: User.getUid())
         
-        if !all {
+        if all {
             query = FB_DB_REF.child("missing_requests")
+        }
+        
+        if myCity {
+            let city = DEFAULTS.string(forKey: "CurrentCity") ?? ""
+            query = FB_DB_REF.child("missing_requests").queryOrdered(byChild: "dissappeared_city").queryEqual(toValue: city)
         }
         
         var requests = [MissingModel]()

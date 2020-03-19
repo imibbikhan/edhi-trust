@@ -52,8 +52,6 @@
 		EEC865A0240E5F4200D84AEC /* BloodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC8659F240E5F4200D84AEC /* BloodView.xib */; };
 		EED4C7F02420D25700A000C0 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4C7EF2420D25700A000C0 /* DatePicker.swift */; };
 		EED4C7F22420E97900A000C0 /* MissingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4C7F12420E97900A000C0 /* MissingPresenter.swift */; };
-		EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */; };
-		EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */; };
 		EEE95467241E84C3006C7F57 /* PostMissingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE95466241E84C3006C7F57 /* PostMissingPresenter.swift */; };
 		EEE9546A241E84D9006C7F57 /* MissingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE95469241E84D9006C7F57 /* MissingModel.swift */; };
 		EEE9546D241E84E8006C7F57 /* MissingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE9546C241E84E8006C7F57 /* MissingDelegate.swift */; };
@@ -62,6 +60,8 @@
 		EEEB0A4323C37E660005E291 /* AmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A4223C37E660005E291 /* AmbulancesViewController.swift */; };
 		EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEB0A4423C37F4D0005E291 /* PopUpDailogue.swift */; };
 		EEEB0A4723C37FCC0005E291 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = EEEB0A4623C37FCC0005E291 /* style.json */; };
+		EEF7EBCC242316F100D9CF50 /* StartHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF7EBCB242316F100D9CF50 /* StartHomePresenter.swift */; };
+		EEF7EBCF2423171F00D9CF50 /* StartHomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF7EBCE2423171F00D9CF50 /* StartHomeDelegate.swift */; };
 		EEFC0E87242228A2002C99E0 /* AmbulancesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC0E86242228A2002C99E0 /* AmbulancesPresenter.swift */; };
 		EEFC0E8A242228B6002C99E0 /* AmbulanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC0E89242228B6002C99E0 /* AmbulanceDelegate.swift */; };
 		EEFC0E8D242228CB002C99E0 /* AmbulanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC0E8C242228CB002C99E0 /* AmbulanceModel.swift */; };
@@ -118,8 +118,6 @@
 		EEC8659F240E5F4200D84AEC /* BloodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodView.xib; sourceTree = "<group>"; };
 		EED4C7EF2420D25700A000C0 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		EED4C7F12420E97900A000C0 /* MissingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPresenter.swift; sourceTree = "<group>"; };
-		EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRequestsCarbonViewController.swift; sourceTree = "<group>"; };
-		EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPersonCarbonViewController.swift; sourceTree = "<group>"; };
 		EEE95466241E84C3006C7F57 /* PostMissingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMissingPresenter.swift; sourceTree = "<group>"; };
 		EEE95469241E84D9006C7F57 /* MissingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingModel.swift; sourceTree = "<group>"; };
 		EEE9546C241E84E8006C7F57 /* MissingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +126,8 @@
 		EEEB0A4223C37E660005E291 /* AmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbulancesViewController.swift; sourceTree = "<group>"; };
 		EEEB0A4423C37F4D0005E291 /* PopUpDailogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDailogue.swift; sourceTree = "<group>"; };
 		EEEB0A4623C37FCC0005E291 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		EEF7EBCB242316F100D9CF50 /* StartHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartHomePresenter.swift; sourceTree = "<group>"; };
+		EEF7EBCE2423171F00D9CF50 /* StartHomeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartHomeDelegate.swift; sourceTree = "<group>"; };
 		EEFC0E86242228A2002C99E0 /* AmbulancesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbulancesPresenter.swift; sourceTree = "<group>"; };
 		EEFC0E89242228B6002C99E0 /* AmbulanceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbulanceDelegate.swift; sourceTree = "<group>"; };
 		EEFC0E8C242228CB002C99E0 /* AmbulanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbulanceModel.swift; sourceTree = "<group>"; };
@@ -427,7 +427,6 @@
 		EED5D4B323C39B7E00F516A0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EED5D4B423C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift */,
 				EE51A1A223C49017007602CF /* BloodRequestsViewController.swift */,
 				EE51A1AA23C499B3007602CF /* PostBloodRequestViewController.swift */,
 				EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */,
@@ -449,7 +448,6 @@
 		EED5D4B723C39DDA00F516A0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EED5D4B823C39DE800F516A0 /* MissingPersonCarbonViewController.swift */,
 				EE404B7923C8B34000884272 /* MissingsViewController.swift */,
 				EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */,
 				EE7CB5DC2421B6CD0051BCA8 /* MissingViewViewController.swift */,
@@ -485,6 +483,8 @@
 		EEEB0A3C23C36F880005E291 /* Start Home */ = {
 			isa = PBXGroup;
 			children = (
+				EEF7EBCD242316F600D9CF50 /* Delegate */,
+				EEF7EBCA242316E000D9CF50 /* Presenter */,
 				EEEB0A3D23C36F900005E291 /* ViewControllers */,
 			);
 			path = "Start Home";
@@ -517,6 +517,22 @@
 				EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EEF7EBCA242316E000D9CF50 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EEF7EBCB242316F100D9CF50 /* StartHomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EEF7EBCD242316F600D9CF50 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EEF7EBCE2423171F00D9CF50 /* StartHomeDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		EEFC0E852422288E002C99E0 /* Presenter */ = {
@@ -684,7 +700,6 @@
 			files = (
 				EE4453FF241B2BE200AD0F80 /* EditProfilePresenter.swift in Sources */,
 				EEEB0A4323C37E660005E291 /* AmbulancesViewController.swift in Sources */,
-				EED5D4B523C39B9D00F516A0 /* BloodRequestsCarbonViewController.swift in Sources */,
 				EE0301922411FC16004F873B /* AuthDelegate.swift in Sources */,
 				EE03019A24120899004F873B /* Navigator.swift in Sources */,
 				EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */,
@@ -693,6 +708,7 @@
 				EEFC0E8D242228CB002C99E0 /* AmbulanceModel.swift in Sources */,
 				EEE9546A241E84D9006C7F57 /* MissingModel.swift in Sources */,
 				EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */,
+				EEF7EBCF2423171F00D9CF50 /* StartHomeDelegate.swift in Sources */,
 				EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */,
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
 				EE7CB5DD2421B6CD0051BCA8 /* MissingViewViewController.swift in Sources */,
@@ -717,6 +733,7 @@
 				EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */,
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
 				EE03018B2411FB4D004F873B /* AuthPresenter.swift in Sources */,
+				EEF7EBCC242316F100D9CF50 /* StartHomePresenter.swift in Sources */,
 				EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */,
 				EE7956AC241B87740056118E /* ViewBloodRequestViewController.swift in Sources */,
 				EEE95467241E84C3006C7F57 /* PostMissingPresenter.swift in Sources */,
@@ -724,7 +741,6 @@
 				EEEB0A3F23C36FA00005E291 /* StartHomeViewController.swift in Sources */,
 				EEE9546D241E84E8006C7F57 /* MissingDelegate.swift in Sources */,
 				EE445402241B2BF200AD0F80 /* EditProfileDelegate.swift in Sources */,
-				EED5D4B923C39DE800F516A0 /* MissingPersonCarbonViewController.swift in Sources */,
 				EE5C49092412634700783D9B /* BloodRequestDelegate.swift in Sources */,
 				EE6D7A8324129583001D71BD /* BloodRequestsPresenter.swift in Sources */,
 				EE03018F2411FBAC004F873B /* AuthModel.swift in Sources */,

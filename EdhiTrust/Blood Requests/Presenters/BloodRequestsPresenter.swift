@@ -10,9 +10,9 @@ import Foundation
 class BloodRequestsPresenter {
     var delegate: BloodRequestsDelegate?
     
-    func getMyRequests(allRequests: Bool) {
+    func getBloodRequests(all: Bool, myCity: Bool = false) {
         guard let delegate = self.delegate else { return }
-        DBHandler.shared.getBloodRequestsDB(allRequests: allRequests) { (requests, error) in
+        DBHandler.shared.getBloodRequestsDB(allRequests: all, myCity: myCity) { (requests, error) in
             if let err = error {
                 delegate.error(message: err)
                 return

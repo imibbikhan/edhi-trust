@@ -60,8 +60,7 @@ extension AmbulanceViewViewController {
         driverName.text = ambulance.driverName
         isAvailable.text = ambulance.isAvailable ? "Available" : "Not Available"
         let dist = ambulance.onDistance ?? 0.0
-        let distInK =  dist / 1000
-        onDistance.text = "\(Int(distInK)) KM"
+        onDistance.text = "\(Locations.distanceString(distance: dist)) KM"
         phoneNumber = ambulance.phoneNumber
     }
 
