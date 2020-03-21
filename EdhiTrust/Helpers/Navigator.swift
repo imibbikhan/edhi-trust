@@ -18,6 +18,11 @@ enum Routes: String {
     case viewAllAmbulances = "AllAmbulances"
     case postBloodRequest = "PostBloodRequest"
     case postMissings = "PostMissings"
+    case centerDetails = "CenterDetails"
+    case donations = "Donations"
+    case bloodRequests = "Blood"
+    case missingsRequests = "Missings"
+    case ambulance = "Ambulance"
 }
 class Navigator {
     static func navigate(route to: Routes, from: UIViewController) {

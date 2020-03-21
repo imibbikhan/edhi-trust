@@ -66,8 +66,28 @@ extension StartHomeViewController {
         slideShow.setImageInputs(sdWebImageSource)
     }
     fileprivate func menuCollectionClicked(index: Int) {
-        let vc = STORYBOARD.instantiateViewController(withIdentifier: list[index])
-        self.navigationController?.pushViewController(vc, animated: true)
+        var route: Routes = Routes.missingsDonationsHome
+        
+        switch index {
+        case 0:
+            route = .missingsDonationsHome
+        case 1:
+            route = .ambulance
+        case 2:
+            route = .bloodRequests
+        case 3:
+            route = .missingsRequests
+        case 4:
+            route = .donations
+        case 5:
+            return
+        case 6:
+            route = .editProfile
+        default:
+            route = .centerDetails
+        }
+        
+        Navigator.navigate(route: route, from: self)
     }
     
     // Location Manager

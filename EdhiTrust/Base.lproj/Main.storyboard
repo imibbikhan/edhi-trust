@@ -168,7 +168,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-Jv-anP">
-                                                                <rect key="frame" x="6" y="6" width="124" height="124"/>
+                                                                <rect key="frame" x="68" y="68" width="62" height="62"/>
                                                                 <state key="normal" image="uploadIcon"/>
                                                                 <connections>
                                                                     <action selector="pickImageClicked:" destination="DcD-7I-2FD" eventType="touchUpInside" id="fiQ-vv-HQ1"/>
@@ -1275,6 +1275,33 @@
             </objects>
             <point key="canvasLocation" x="4265.217391304348" y="-911.38392857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="m1y-ae-LBa">
+            <objects>
+                <viewController storyboardIdentifier="Donations" id="PDa-Zg-ybC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8z-3R-RpX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donations View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u08-Yi-Vie">
+                                <rect key="frame" x="147.5" y="437.5" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="u08-Yi-Vie" firstAttribute="centerY" secondItem="z8z-3R-RpX" secondAttribute="centerY" id="Kz0-xv-8bZ"/>
+                            <constraint firstItem="u08-Yi-Vie" firstAttribute="centerX" secondItem="z8z-3R-RpX" secondAttribute="centerX" id="tYE-Ty-ZfE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pvX-kX-dgu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRR-QE-2y0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5808" y="-935"/>
+        </scene>
         <!--Missing View View Controller-->
         <scene sceneID="VLx-AQ-s98">
             <objects>
@@ -1546,7 +1573,7 @@
         <!--Centers Details View Controller-->
         <scene sceneID="9lG-yH-ONc">
             <objects>
-                <viewController storyboardIdentifier="Centers" id="nPO-rQ-Kj4" customClass="CentersDetailsViewController" customModule="EdhiTrust" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CenterDetails" id="nPO-rQ-Kj4" customClass="CentersDetailsViewController" customModule="EdhiTrust" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="562-cK-ys2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1638,7 +1665,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-s3-Qqm">
-                                                                        <rect key="frame" x="6" y="6" width="124" height="124"/>
+                                                                        <rect key="frame" x="68" y="68" width="62" height="62"/>
                                                                         <state key="normal" image="uploadIcon"/>
                                                                         <connections>
                                                                             <action selector="pickImageClicked:" destination="DcD-7I-2FD" eventType="touchUpInside" id="1lB-oR-o6B"/>

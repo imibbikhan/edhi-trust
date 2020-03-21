@@ -384,11 +384,11 @@
 		EEC26E7A23C3023400AC6C4B /* EdhiTrust */ = {
 			isa = PBXGroup;
 			children = (
-				EE4453F2241B1F3E00AD0F80 /* Profile */,
 				EE5C490A2412675000783D9B /* Backend Handlers */,
-				EE56668723CC0D3A005A7415 /* Center Details */,
 				EE95DD0623C309BF00BFC0EB /* Helpers */,
 				EE51A1A423C493D9007602CF /* CustomViews */,
+				EE56668723CC0D3A005A7415 /* Center Details */,
+				EE4453F2241B1F3E00AD0F80 /* Profile */,
 				EED5D4B623C39DD200F516A0 /* Missing Person */,
 				EED5D4B223C39B6800F516A0 /* Blood Requests */,
 				EEEB0A4023C37E4A0005E291 /* Ambulances */,
