@@ -51,6 +51,10 @@
 		EE8B34402529A3260007E493 /* DonationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B343F2529A3260007E493 /* DonationModel.swift */; };
 		EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0723C309D200BFC0EB /* Constants.swift */; };
 		EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0923C30A1800BFC0EB /* Extension.swift */; };
+		EE960217252CB530006ACB76 /* CenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE960216252CB530006ACB76 /* CenterModel.swift */; };
+		EE96021A252CB728006ACB76 /* CenterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE960219252CB728006ACB76 /* CenterDetailPresenter.swift */; };
+		EE96021D252CB73C006ACB76 /* CenterDetailDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96021C252CB73C006ACB76 /* CenterDetailDelegates.swift */; };
+		EE96021F252CBDEE006ACB76 /* SingleCenterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96021E252CBDEE006ACB76 /* SingleCenterDetailsViewController.swift */; };
 		EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC0D4CB23C8ABB400829B30 /* MissingView.swift */; };
 		EEC0D4CE23C8ABFD00829B30 /* MissingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC0D4CD23C8ABFD00829B30 /* MissingView.xib */; };
 		EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC26E7B23C3023400AC6C4B /* AppDelegate.swift */; };
@@ -124,6 +128,10 @@
 		EE8B343F2529A3260007E493 /* DonationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationModel.swift; sourceTree = "<group>"; };
 		EE95DD0723C309D200BFC0EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE95DD0923C30A1800BFC0EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EE960216252CB530006ACB76 /* CenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModel.swift; sourceTree = "<group>"; };
+		EE960219252CB728006ACB76 /* CenterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailPresenter.swift; sourceTree = "<group>"; };
+		EE96021C252CB73C006ACB76 /* CenterDetailDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailDelegates.swift; sourceTree = "<group>"; };
+		EE96021E252CBDEE006ACB76 /* SingleCenterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCenterDetailsViewController.swift; sourceTree = "<group>"; };
 		EEC0D4CB23C8ABB400829B30 /* MissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingView.swift; sourceTree = "<group>"; };
 		EEC0D4CD23C8ABFD00829B30 /* MissingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissingView.xib; sourceTree = "<group>"; };
 		EEC26E7823C3023400AC6C4B /* EdhiTrust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdhiTrust.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,6 +340,9 @@
 		EE56668723CC0D3A005A7415 /* Center Details */ = {
 			isa = PBXGroup;
 			children = (
+				EE96021B252CB72D006ACB76 /* Delegates */,
+				EE960218252CB71A006ACB76 /* Presenter */,
+				EE960215252CB522006ACB76 /* Model */,
 				EE56668823CC0D45005A7415 /* ViewControllers */,
 			);
 			path = "Center Details";
@@ -341,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				EE56668923CC0D60005A7415 /* CentersDetailsViewController.swift */,
+				EE96021E252CBDEE006ACB76 /* SingleCenterDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -459,6 +471,30 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		EE960215252CB522006ACB76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE960216252CB530006ACB76 /* CenterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE960218252CB71A006ACB76 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EE960219252CB728006ACB76 /* CenterDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EE96021B252CB72D006ACB76 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EE96021C252CB73C006ACB76 /* CenterDetailDelegates.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		EEC0D4CA23C8ABA700829B30 /* MissingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,11 +525,11 @@
 		EEC26E7A23C3023400AC6C4B /* EdhiTrust */ = {
 			isa = PBXGroup;
 			children = (
-				EE1DDDFF252C48CE00FE766F /* Call Centers */,
-				EE8B34342529999D0007E493 /* Donations */,
 				EE5C490A2412675000783D9B /* Backend Handlers */,
 				EE95DD0623C309BF00BFC0EB /* Helpers */,
+				EE8B34342529999D0007E493 /* Donations */,
 				EE51A1A423C493D9007602CF /* CustomViews */,
+				EE1DDDFF252C48CE00FE766F /* Call Centers */,
 				EE56668723CC0D3A005A7415 /* Center Details */,
 				EE4453F2241B1F3E00AD0F80 /* Profile */,
 				EED5D4B623C39DD200F516A0 /* Missing Person */,
@@ -823,6 +859,7 @@
 				EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */,
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
 				EE7CB5DD2421B6CD0051BCA8 /* MissingViewViewController.swift in Sources */,
+				EE960217252CB530006ACB76 /* CenterModel.swift in Sources */,
 				EE03019624120092004F873B /* SignInViewController.swift in Sources */,
 				EE4453F7241B2A2800AD0F80 /* STHandler.swift in Sources */,
 				EE445404241B320300AD0F80 /* DBHandler.swift in Sources */,
@@ -838,6 +875,7 @@
 				EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */,
 				EE456D13240F503B004D06AA /* AmbulanceViewViewController.swift in Sources */,
 				EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */,
+				EE96021A252CB728006ACB76 /* CenterDetailPresenter.swift in Sources */,
 				EE8B3437252999C20007E493 /* DonationViewController.swift in Sources */,
 				EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */,
 				EE5C49062412633200783D9B /* BloodRequestModel.swift in Sources */,
@@ -857,6 +895,8 @@
 				EEE9546D241E84E8006C7F57 /* MissingDelegate.swift in Sources */,
 				EE445402241B2BF200AD0F80 /* EditProfileDelegate.swift in Sources */,
 				EE5C49092412634700783D9B /* BloodRequestDelegate.swift in Sources */,
+				EE96021F252CBDEE006ACB76 /* SingleCenterDetailsViewController.swift in Sources */,
+				EE96021D252CB73C006ACB76 /* CenterDetailDelegates.swift in Sources */,
 				EE6D7A8324129583001D71BD /* BloodRequestsPresenter.swift in Sources */,
 				EE03018F2411FBAC004F873B /* AuthModel.swift in Sources */,
 				EE5C490024125E8B00783D9B /* StringPicker.swift in Sources */,

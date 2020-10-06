@@ -66,7 +66,7 @@ class DBHandler {
         
         if myCity {
             let city = DEFAULTS.string(forKey: "CurrentCity") ?? ""
-            query = FB_DB_REF.child("missing_requests").queryOrdered(byChild: "dissappeared_city").queryEqual(toValue: city)
+            query = FB_DB_REF.child("missing_requests").queryOrdered(byChild: "dissappeared_city").queryEqual(toValue: city.lowercased())
         }
         
         var requests = [MissingModel]()
@@ -139,6 +139,19 @@ class DBHandler {
                 var centers = [String: CallCenterModel]()
                 do {
                     centers = try FirebaseDecoder().decode([String: CallCenterModel].self, from: snapShot.value!)
+                    fetched(centers, nil)
+                }catch {
+                    fetched(centers, error.localizedDescription)
+                }
+            }
+        }
+    }
+    func getCentersDetails(fetched: @escaping ([String: CenterModel], String?)->Void) {
+        FB_DB_REF.child("center_information").observeSingleEvent(of: .value) { (snapShot) in
+            if snapShot.exists() {
+                var centers = [String: CenterModel]()
+                do {
+                    centers = try FirebaseDecoder().decode([String: CenterModel].self, from: snapShot.value!)
                     fetched(centers, nil)
                 }catch {
                     fetched(centers, error.localizedDescription)

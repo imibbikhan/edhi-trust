@@ -67,7 +67,7 @@ class PostBloodRequestViewController: UIViewController {
         if let model = bloodRequestModel {
             key = model.requestKey
         }
-        let bloodRequest = BloodRequestModel(requestKey: key, referCity: cityRefer, gender: gender, bloodGroup: bloodGroup, fullAddress: fullAddress, phoneNumber: phone, age: age, requestType: requestType, bloodFor: bloodFor, userKey: uid)
+        let bloodRequest = BloodRequestModel(requestKey: key, referCity: cityRefer.lowercased(), gender: gender, bloodGroup: bloodGroup, fullAddress: fullAddress, phoneNumber: phone, age: age, requestType: requestType, bloodFor: bloodFor, userKey: uid)
         HUD.show(.progress)
         presenter.postBloodRequest(request: bloodRequest)
         

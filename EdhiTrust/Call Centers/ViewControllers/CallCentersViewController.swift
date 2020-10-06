@@ -101,8 +101,6 @@ extension CallCentersViewController: CallCenterDelegates {
         HUD.hide()
         PopUp.shared.show(view: self, message: message)
     }
-    
-    
 }
 
 // MARK: - TableViewCell

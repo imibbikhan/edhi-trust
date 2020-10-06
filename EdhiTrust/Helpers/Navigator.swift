@@ -25,6 +25,7 @@ enum Routes: String {
     case ambulance = "Ambulance"
     case callCenters = "CallCenters"
     case singleCenter = "SingleCenterView"
+    case singleCenterDetails = "SingleCenterDetail"
 }
 class Navigator {
     static func navigate(route to: Routes, from: UIViewController) {
@@ -64,6 +65,11 @@ class Navigator {
     static func toSingleCenter(center: CallCenterModel, from: UIViewController) {
         let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.singleCenter.rawValue) as? SingleCenterViewController
         vc?.center = center
+        from.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    static func toSingleCenterDetails(center: CenterModel, from: UIViewController) {
+        let vc = STORYBOARD.instantiateViewController(withIdentifier: Routes.singleCenterDetails.rawValue) as? SingleCenterDetailsViewController
+        vc?.centerDetails = center
         from.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 }

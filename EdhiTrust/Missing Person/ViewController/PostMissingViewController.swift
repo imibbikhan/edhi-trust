@@ -81,7 +81,7 @@ extension PostMissingViewController {
         let number = User.getPhoneNumber()
         let uid = User.getUid()
         
-        let missing = MissingModel(missingKey: key, missingName: name, city: from, address: address, gender: genderText, phoneNumber: number, age: age, imageURL: url, missingStatus: missingTypeText, userKey: uid, disappearedDate: missingDateStr, dissappearedCity: dissappearedFrom)
+        let missing = MissingModel(missingKey: key, missingName: name, city: from, address: address, gender: genderText, phoneNumber: number, age: age, imageURL: url, missingStatus: missingTypeText, userKey: uid, disappearedDate: missingDateStr, dissappearedCity: dissappearedFrom.lowercased())
         return missing
     }
     // MARK: - Interface Actions
