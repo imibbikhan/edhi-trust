@@ -17,6 +17,9 @@ class MissingPresenter {
                 delegate.error(message: err)
                 return
             }
+            if all {
+                print(missings)
+            }
             delegate.missingsFetched(missings: missings)
         }
     }

@@ -44,7 +44,6 @@ class DBHandler {
             for case let request as DataSnapshot in snapShot.children {
                 do {
                     let decodedRequest = try FirebaseDecoder().decode(BloodRequestModel.self, from: request.value!)
-                    print(decodedRequest)
                     requests.append(decodedRequest)
                 }catch{
                     fetched(requests, error.localizedDescription)
@@ -120,6 +119,30 @@ class DBHandler {
                 success(err.localizedDescription)
             }else{
                 success(nil)
+            }
+        }
+    }
+    func addDonatedItem(item: DonationModel, success: @escaping (String?)->Void) {
+        let data = ["donor_address": item.address, "donor_city": item.city, "donor_number": item.contactNumber, "item_price": item.estimatedCost]
+        FB_DB_REF.child("items_detail").childByAutoId().setValue(data){
+            (error, refer) in
+            if let err = error {
+                success(err.localizedDescription)
+            }else{
+                success(nil)
+            }
+        }
+    }
+    func getCallCenters(fetched: @escaping ([String: CallCenterModel], String?)->Void) {
+        FB_DB_REF.child("center_contact").observeSingleEvent(of: .value) { (snapShot) in
+            if snapShot.exists() {
+                var centers = [String: CallCenterModel]()
+                do {
+                    centers = try FirebaseDecoder().decode([String: CallCenterModel].self, from: snapShot.value!)
+                    fetched(centers, nil)
+                }catch {
+                    fetched(centers, error.localizedDescription)
+                }
             }
         }
     }

@@ -80,7 +80,7 @@ extension StartHomeViewController {
         case 4:
             route = .donations
         case 5:
-            return
+            route = .callCenters
         case 6:
             route = .editProfile
         default:
@@ -216,6 +216,7 @@ extension StartHomeViewController: StartHomeDelegate {
     }
     
     func missingRequestsFetched(missings: [MissingModel]) {
+        print("Missings are: - \(missings.count)")
         DispatchQueue.main.async {
             HUD.flash(.progress, delay: 3)
             self.missings = missings

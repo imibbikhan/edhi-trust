@@ -15,6 +15,11 @@
 		EE0301942411FE52004F873B /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0301932411FE52004F873B /* FloatButton.swift */; };
 		EE03019624120092004F873B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03019524120092004F873B /* SignInViewController.swift */; };
 		EE03019A24120899004F873B /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03019924120899004F873B /* Navigator.swift */; };
+		EE1DDE02252C48E900FE766F /* CallCentersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1DDE01252C48E900FE766F /* CallCentersViewController.swift */; };
+		EE1DDE05252C4A6D00FE766F /* CallCenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1DDE04252C4A6D00FE766F /* CallCenterModel.swift */; };
+		EE1DDE08252C4AFC00FE766F /* CallCenterDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1DDE07252C4AFC00FE766F /* CallCenterDelegates.swift */; };
+		EE1DDE0B252C4B3400FE766F /* CallCenterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1DDE0A252C4B3400FE766F /* CallCenterPresenter.swift */; };
+		EE1DDE0D252C558200FE766F /* SingleCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1DDE0C252C558200FE766F /* SingleCenterViewController.swift */; };
 		EE31138823C6ECFB006EFF1E /* GenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE31138723C6ECFB006EFF1E /* GenderView.xib */; };
 		EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE31138923C6EDE6006EFF1E /* GenderView.swift */; };
 		EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */; };
@@ -40,6 +45,10 @@
 		EE718487240F79C8009BD813 /* AllAmbulancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */; };
 		EE7956AC241B87740056118E /* ViewBloodRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */; };
 		EE7CB5DD2421B6CD0051BCA8 /* MissingViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CB5DC2421B6CD0051BCA8 /* MissingViewViewController.swift */; };
+		EE8B3437252999C20007E493 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B3436252999C20007E493 /* DonationViewController.swift */; };
+		EE8B343A2529A0630007E493 /* DonatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B34392529A0630007E493 /* DonatePresenter.swift */; };
+		EE8B343D2529A18C0007E493 /* DonationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B343C2529A18C0007E493 /* DonationDelegate.swift */; };
+		EE8B34402529A3260007E493 /* DonationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B343F2529A3260007E493 /* DonationModel.swift */; };
 		EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0723C309D200BFC0EB /* Constants.swift */; };
 		EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95DD0923C30A1800BFC0EB /* Extension.swift */; };
 		EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC0D4CB23C8ABB400829B30 /* MissingView.swift */; };
@@ -79,6 +88,11 @@
 		EE0301932411FE52004F873B /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
 		EE03019524120092004F873B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE03019924120899004F873B /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		EE1DDE01252C48E900FE766F /* CallCentersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCentersViewController.swift; sourceTree = "<group>"; };
+		EE1DDE04252C4A6D00FE766F /* CallCenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenterModel.swift; sourceTree = "<group>"; };
+		EE1DDE07252C4AFC00FE766F /* CallCenterDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenterDelegates.swift; sourceTree = "<group>"; };
+		EE1DDE0A252C4B3400FE766F /* CallCenterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenterPresenter.swift; sourceTree = "<group>"; };
+		EE1DDE0C252C558200FE766F /* SingleCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCenterViewController.swift; sourceTree = "<group>"; };
 		EE31138723C6ECFB006EFF1E /* GenderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderView.xib; sourceTree = "<group>"; };
 		EE31138923C6EDE6006EFF1E /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
 		EE3AAC8123CB54360010BC96 /* PostMissingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMissingViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +118,10 @@
 		EE718486240F79C8009BD813 /* AllAmbulancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmbulancesViewController.swift; sourceTree = "<group>"; };
 		EE7956AB241B87740056118E /* ViewBloodRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBloodRequestViewController.swift; sourceTree = "<group>"; };
 		EE7CB5DC2421B6CD0051BCA8 /* MissingViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingViewViewController.swift; sourceTree = "<group>"; };
+		EE8B3436252999C20007E493 /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		EE8B34392529A0630007E493 /* DonatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatePresenter.swift; sourceTree = "<group>"; };
+		EE8B343C2529A18C0007E493 /* DonationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDelegate.swift; sourceTree = "<group>"; };
+		EE8B343F2529A3260007E493 /* DonationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationModel.swift; sourceTree = "<group>"; };
 		EE95DD0723C309D200BFC0EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE95DD0923C30A1800BFC0EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EEC0D4CB23C8ABB400829B30 /* MissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingView.swift; sourceTree = "<group>"; };
@@ -193,6 +211,50 @@
 				EE0301912411FC16004F873B /* AuthDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		EE1DDDFF252C48CE00FE766F /* Call Centers */ = {
+			isa = PBXGroup;
+			children = (
+				EE1DDE09252C4B2800FE766F /* Presenters */,
+				EE1DDE06252C4AEC00FE766F /* Delegates */,
+				EE1DDE03252C4A6000FE766F /* Model */,
+				EE1DDE00252C48D600FE766F /* ViewControllers */,
+			);
+			path = "Call Centers";
+			sourceTree = "<group>";
+		};
+		EE1DDE00252C48D600FE766F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE1DDE01252C48E900FE766F /* CallCentersViewController.swift */,
+				EE1DDE0C252C558200FE766F /* SingleCenterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EE1DDE03252C4A6000FE766F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE1DDE04252C4A6D00FE766F /* CallCenterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE1DDE06252C4AEC00FE766F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EE1DDE07252C4AFC00FE766F /* CallCenterDelegates.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		EE1DDE09252C4B2800FE766F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EE1DDE0A252C4B3400FE766F /* CallCenterPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		EE31138623C6E81C006EFF1E /* GenderView */ = {
@@ -318,6 +380,49 @@
 			path = "Backend Handlers";
 			sourceTree = "<group>";
 		};
+		EE8B34342529999D0007E493 /* Donations */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B343E2529A31A0007E493 /* Model */,
+				EE8B343B2529A16E0007E493 /* Delegates */,
+				EE8B34382529A03F0007E493 /* Presenter */,
+				EE8B3435252999A60007E493 /* ViewControllers */,
+			);
+			path = Donations;
+			sourceTree = "<group>";
+		};
+		EE8B3435252999A60007E493 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B3436252999C20007E493 /* DonationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EE8B34382529A03F0007E493 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B34392529A0630007E493 /* DonatePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EE8B343B2529A16E0007E493 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B343C2529A18C0007E493 /* DonationDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		EE8B343E2529A31A0007E493 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B343F2529A3260007E493 /* DonationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EE95DD0223C306FD00BFC0EB /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +489,8 @@
 		EEC26E7A23C3023400AC6C4B /* EdhiTrust */ = {
 			isa = PBXGroup;
 			children = (
+				EE1DDDFF252C48CE00FE766F /* Call Centers */,
+				EE8B34342529999D0007E493 /* Donations */,
 				EE5C490A2412675000783D9B /* Backend Handlers */,
 				EE95DD0623C309BF00BFC0EB /* Helpers */,
 				EE51A1A423C493D9007602CF /* CustomViews */,
@@ -698,16 +805,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8B343D2529A18C0007E493 /* DonationDelegate.swift in Sources */,
 				EE4453FF241B2BE200AD0F80 /* EditProfilePresenter.swift in Sources */,
 				EEEB0A4323C37E660005E291 /* AmbulancesViewController.swift in Sources */,
 				EE0301922411FC16004F873B /* AuthDelegate.swift in Sources */,
 				EE03019A24120899004F873B /* Navigator.swift in Sources */,
 				EE95DD0A23C30A1800BFC0EB /* Extension.swift in Sources */,
 				EEFC0E8A242228B6002C99E0 /* AmbulanceDelegate.swift in Sources */,
+				EE1DDE05252C4A6D00FE766F /* CallCenterModel.swift in Sources */,
 				EE3AAC8223CB54360010BC96 /* PostMissingViewController.swift in Sources */,
 				EEFC0E8D242228CB002C99E0 /* AmbulanceModel.swift in Sources */,
+				EE1DDE02252C48E900FE766F /* CallCentersViewController.swift in Sources */,
 				EEE9546A241E84D9006C7F57 /* MissingModel.swift in Sources */,
 				EE56668A23CC0D60005A7415 /* CentersDetailsViewController.swift in Sources */,
+				EE8B343A2529A0630007E493 /* DonatePresenter.swift in Sources */,
 				EEF7EBCF2423171F00D9CF50 /* StartHomeDelegate.swift in Sources */,
 				EE404B7A23C8B34000884272 /* MissingsViewController.swift in Sources */,
 				EEC26E7C23C3023400AC6C4B /* AppDelegate.swift in Sources */,
@@ -719,6 +830,7 @@
 				EED4C7F22420E97900A000C0 /* MissingPresenter.swift in Sources */,
 				EE4453F9241B2A9100AD0F80 /* User.swift in Sources */,
 				EE51A1A323C49017007602CF /* BloodRequestsViewController.swift in Sources */,
+				EE1DDE0B252C4B3400FE766F /* CallCenterPresenter.swift in Sources */,
 				EEFC0E87242228A2002C99E0 /* AmbulancesPresenter.swift in Sources */,
 				EE31138A23C6EDE6006EFF1E /* GenderView.swift in Sources */,
 				EE0301942411FE52004F873B /* FloatButton.swift in Sources */,
@@ -726,11 +838,14 @@
 				EEC0D4CC23C8ABB400829B30 /* MissingView.swift in Sources */,
 				EE456D13240F503B004D06AA /* AmbulanceViewViewController.swift in Sources */,
 				EEEB0A4523C37F4D0005E291 /* PopUpDailogue.swift in Sources */,
+				EE8B3437252999C20007E493 /* DonationViewController.swift in Sources */,
 				EE95DD0823C309D200BFC0EB /* Constants.swift in Sources */,
 				EE5C49062412633200783D9B /* BloodRequestModel.swift in Sources */,
 				EED4C7F02420D25700A000C0 /* DatePicker.swift in Sources */,
 				EEFC0E8F24222B77002C99E0 /* Locations.swift in Sources */,
 				EEC8659E240E5EB400D84AEC /* BloodView.swift in Sources */,
+				EE8B34402529A3260007E493 /* DonationModel.swift in Sources */,
+				EE1DDE0D252C558200FE766F /* SingleCenterViewController.swift in Sources */,
 				EEEB0A3B23C3655B0005E291 /* RoundShadowView.swift in Sources */,
 				EE03018B2411FB4D004F873B /* AuthPresenter.swift in Sources */,
 				EEF7EBCC242316F100D9CF50 /* StartHomePresenter.swift in Sources */,
@@ -747,6 +862,7 @@
 				EE5C490024125E8B00783D9B /* StringPicker.swift in Sources */,
 				EE51A1A823C493FF007602CF /* IconTextFieldView.swift in Sources */,
 				EE51A1AB23C499B3007602CF /* PostBloodRequestViewController.swift in Sources */,
+				EE1DDE08252C4AFC00FE766F /* CallCenterDelegates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
