@@ -20,4 +20,7 @@ class BloodRequestsPresenter {
             delegate.requestsFetched(requests: requests)
         }
     }
+    func deleteBloodRequest(key: String) {
+        DBHandler.shared.deleteBlood(key: key)
+    }
 }

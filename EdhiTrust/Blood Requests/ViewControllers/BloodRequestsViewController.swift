@@ -44,7 +44,7 @@ class BloodRequestsViewController: UIViewController {
         if gesture.state == .ended {
             PopUp.shared.showOptions(view: self) { (action) in
                 if action {
-                    print("true")
+                    self.presenter.deleteBloodRequest(key: self.requests[indexValue.row].requestKey)
                 }else{
                     Navigator.toEditBloodRequest(request: self.requests[indexValue.row], from: self)
                 }

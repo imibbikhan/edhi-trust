@@ -605,6 +605,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Notify Ambulance"/>
+                                                        <connections>
+                                                            <action selector="notifyAmbulance:" destination="0xd-Am-7HG" eventType="touchUpInside" id="rvF-zg-H0l"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwH-zd-NYK">
                                                         <rect key="frame" x="0.0" y="49" width="374" height="35"/>
@@ -1754,7 +1757,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yw-ev-xbl">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Center" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yw-ev-xbl">
                                 <rect key="frame" x="10" y="44" width="394" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -2417,7 +2420,7 @@
     <resources>
         <image name="amb" width="24" height="24"/>
         <image name="ambulance" width="512" height="512"/>
-        <image name="avatar" width="320" height="320"/>
+        <image name="avatar" width="256" height="256"/>
         <image name="bloodRe" width="30" height="30"/>
         <image name="contact center" width="512" height="512"/>
         <image name="miss" width="1280" height="1024"/>

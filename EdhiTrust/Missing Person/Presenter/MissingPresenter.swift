@@ -23,4 +23,7 @@ class MissingPresenter {
             delegate.missingsFetched(missings: missings)
         }
     }
+    func deleteMissingPost(key: String) {
+        DBHandler.shared.deleteMissing(key: key)
+    }
 }

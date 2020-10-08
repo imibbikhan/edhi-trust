@@ -13,7 +13,7 @@ struct AmbulanceModel: Codable {
     let location: Location
     let phoneNumber: String
     var onDistance: Double?
-    let isAvailable: Bool
+    let isAvailable: String
     
     
     enum CodingKeys: String, CodingKey {
@@ -33,7 +33,7 @@ struct AmbulanceModel: Codable {
         city = try values.decodeIfPresent(String.self, forKey: .city) ?? ""
         driverName = try values.decodeIfPresent(String.self, forKey: .driverName) ?? ""
         phoneNumber = try values.decodeIfPresent(String.self, forKey: .phoneNumber) ?? ""
-        isAvailable = try values.decodeIfPresent(Bool.self, forKey: .isAvailable) ?? false
+        isAvailable = try values.decodeIfPresent(String.self, forKey: .isAvailable) ?? ""
         location = try values.decodeIfPresent(Location.self, forKey: .location) ?? Location(lati: 0, longi: 0)
     }
 }

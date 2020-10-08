@@ -46,7 +46,7 @@ class MissingsViewController: UIViewController {
         if gesture.state == .ended {
             PopUp.shared.showOptions(view: self) { (action) in
                 if action {
-                    print("true")
+                    self.presenter.deleteMissingPost(key: self.missings[indexValue.row].missingKey)
                 }else{
                     Navigator.toEditMissing(missing: self.missings[indexValue.row], from: self)
                 }

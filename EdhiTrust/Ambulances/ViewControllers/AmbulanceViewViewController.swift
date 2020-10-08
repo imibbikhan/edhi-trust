@@ -8,6 +8,7 @@
 
 import UIKit
 import CodableFirebase
+import FirebaseAuth
 class AmbulanceViewViewController: UIViewController {
     // MARK: - Interface Outlets
     @IBOutlet weak var driverName: UILabel!
@@ -27,6 +28,29 @@ class AmbulanceViewViewController: UIViewController {
     }
     @IBAction func callClicked(_ sender: UIButton) {
         phoneNumber.makeACall()
+    }
+    @IBAction func notifyAmbulance(_ sender: UIButton) {
+        if let amb = self.ambulance {
+            do {
+                let decoded = try FirebaseDecoder().decode(AmbulanceModel.self, from: amb)
+                let lat = DEFAULTS.double(forKey: "Latitude")
+                let long = DEFAULTS.double(forKey: "Longitude")
+                let value = ["lati": lat, "longi": long]
+                
+                DBHandler.shared.postNow(path: "notifications/\(decoded.ambulanceKey)/\(UUID().uuidString)", data: value) { (error) in
+                    if let error = error {
+                        PopUp.shared.show(view: self, message: error)
+                        return
+                    }
+                    PopUp.shared.show(view: self, message: "Ambulance is notified.")
+                }
+                
+            }catch{
+                PopUp.shared.show(view: self, message: error.localizedDescription)
+            }
+            
+        }
+
     }
     // MARK: - Objc Methods
     @objc func dismissNow() {
@@ -48,7 +72,6 @@ extension AmbulanceViewViewController {
         if let amb = self.ambulance {
             do {
                 let decoded = try FirebaseDecoder().decode(AmbulanceModel.self, from: amb)
-                print(decoded)
                 self.updateUI(ambulance: decoded)
             }catch{
                 PopUp.shared.show(view: self, message: error.localizedDescription)
@@ -58,7 +81,7 @@ extension AmbulanceViewViewController {
     }
     fileprivate func updateUI(ambulance: AmbulanceModel) {
         driverName.text = ambulance.driverName
-        isAvailable.text = ambulance.isAvailable ? "Available" : "Not Available"
+        isAvailable.text = ambulance.isAvailable == "true" ? "Available" : "Not Available"
         let dist = ambulance.onDistance ?? 0.0
         onDistance.text = "\(Locations.distanceString(distance: dist)) KM"
         phoneNumber = ambulance.phoneNumber

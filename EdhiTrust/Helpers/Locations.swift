@@ -17,7 +17,6 @@ class Locations {
     }
     static func getGeoAddress(location: CLLocation, address: @escaping (String)->()) {
         CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) in
-            print(placemarks?.first)
             var addressText = ""
             if error != nil {
                 addressText = "Erro occure while getting address."

@@ -88,8 +88,14 @@ class DBHandler {
         }
         
     }
+    func deleteMissing(key: String) {
+        FB_DB_REF.child("missing_requests/\(key)").setValue(nil)
+    }
+    func deleteBlood(key: String) {
+        FB_DB_REF.child("blood_requests/\(key)").setValue(nil)
+    }
     func getAmbulances(city: String, myLocation: CLLocation ,fetched: @escaping ([AmbulanceModel], String?)->Void) {
-        let query = FB_DB_REF.child("ambulances").queryOrdered(byChild: "city").queryEqual(toValue: city)
+        let query = FB_DB_REF.child("ambulances").queryOrdered(byChild: "city").queryEqual(toValue: city.lowercased())
         var ambulances = [AmbulanceModel]()
         query.observe(.value, with: { (snapShot) in
             ambulances.removeAll()

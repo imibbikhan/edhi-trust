@@ -55,7 +55,7 @@ extension AllAmbulancesViewController: UITableViewDelegate, UITableViewDataSourc
         cell?.driverName.text = amb.driverName
         let distance = amb.onDistance ?? 0.0
         cell?.distance.text = "\(Locations.distanceString(distance: distance)) KM Away"
-        cell?.availability.text = amb.isAvailable ? "Available" : "Not Availabe"
+        cell?.availability.text = amb.isAvailable == "true" ? "Available" : "Not Availabe"
         cell?.callBtn.tag = indexPath.row
         cell?.callBtn.addTarget(self, action: #selector(callNow(_:)), for: .touchUpInside)
         

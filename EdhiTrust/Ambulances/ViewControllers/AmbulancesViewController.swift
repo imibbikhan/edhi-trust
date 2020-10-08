@@ -109,6 +109,8 @@ extension AmbulancesViewController: CLLocationManagerDelegate, GMSMapViewDelegat
             let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                                   longitude: location.coordinate.longitude,
                                                   zoom: 12.0)
+            DEFAULTS.set(location.coordinate.latitude, forKey: "Latitude")
+            DEFAULTS.set(location.coordinate.longitude, forKey: "Longitude")
             mapView.camera = camera
             mapView.delegate = self
             mapView.isMyLocationEnabled = true

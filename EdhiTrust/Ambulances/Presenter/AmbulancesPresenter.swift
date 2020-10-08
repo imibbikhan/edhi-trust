@@ -14,7 +14,7 @@ class AmbulancesPresenter {
     
     func getAmbulances(myLocation: CLLocation) {
         guard let delegate = self.delegate else { return }
-        DBHandler.shared.getAmbulances(city: "Kohat", myLocation: myLocation) { (ambulances, error) in
+        DBHandler.shared.getAmbulances(city: "kohat", myLocation: myLocation) { (ambulances, error) in
             if let err = error {
                 delegate.error(message: err)
                 return
@@ -31,4 +31,5 @@ class AmbulancesPresenter {
         }
         return ""
     }
+//    func sendNot
 }
